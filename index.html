@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>  Práctica DIW  </title>
+    <!-- NOS HEMOS DECANTADO POR UTILIZAR EL CDN DE BOOSTRAP -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    
+    <style type="text/css">
+    .titulo{
+
+        color:#012DFF;
+        line-height: 1.2;
+    }
+    #titulo{
+        color:#1F618D;
+        font-style:"century ghotic"
+    }
+    }
+    .p{
+        color:#0066E8;
+    }
+    #cris{
+        background-color:#1F618D;
+        font-size:18px;
+        
+    }
+   
+    
+
+    html, body, #map_canvas {                
+  height: 100%;
+}
+    </style>
+</head>
+<body>
+            <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="cris" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Utilizamos la clase navbar-collapse es decir una lista que se despliega 1 a 1 en dispositivos pequeños -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a id="btnlogo"> <img src="assets/casa.png">
+                        
+                            Bienvenido</a>
+                        </li>
+                    
+                        <li>
+                            <a id="btnsecciones"> <img src="assets/grafico-de-sectores.png">
+                        
+                            Secciones</a>
+                        </li>
+                        <li>
+                           <a id="btngaleria"><img src="assets/galeria.png">
+                        
+                            Galeria</a>
+                        </li>      
+
+                        <li>
+                            <a id="btncarrusel"><img src="assets/carrusel.png">
+                         
+                            Carrusel</a>
+                        </li>                                                                 
+                        <li>
+                            <a id="btnabout"> <img src="assets/social.png">
+                        
+                            Quienes somos</a>
+                        </li>
+                        <li>
+                            <a id="btnregistro"> <img src="assets/portafolios-con-lapiz.png">
+                        
+                            Registro</a>
+                        
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- AQUI TERMINA EL MENU SUPERIOR DE NAVEGACION -->
+                        <script type="text/javascript">
+                $(document).ready(function(){
+                    $("#top").click(function () {
+                        var posicion = $("#aqui").offset().top;
+                        $("html, body").animate({scrollTop: posicion});
+
+                    });
+                    $("#btngaleria").click(function(){
+                        var pos = $("#galeria").offset().top;
+                       $("html, body").animate({scrollTop: pos});
+                    });
+                    $("#btnsecciones").click(function(){
+                        var posi = $("#secciones").offset().top;
+                        $("html, body").animate({scrollTop: posi});
+                    });
+                    $("#btncarrusel").click(function(){
+                        var posi = $("#carrusel").offset().top;
+                        $("html, body").animate({scrollTop: posi});
+                    });
+                    $("#btnabout").click(function(){
+                        var posi = $("#about").offset().top;
+                        $("html, body").animate({scrollTop: posi});
+                    });
+                    $("#btnregistro").click(function(){
+                        var posi = $("#registro").offset().top;
+                        $("html, body").animate({scrollTop: posi});
+                    });
+                });
+                </script>
+        <!-- ABRIMOS UN HEADER PARA UTILIZARLO COMO PRESENTACION DE NUESTRA PAGINA ES DECIR UNA CABEZERA -->
+        <hr>
+        <div id="aqui"></div> <!-- IDENTIFICADOR PARA SUBIR ARRIVA  -->
+        <br><br><br>
+         <div class="container">
+            <div class="row">
+                <div class="col-md-6"> <!-- LOGO -->
+                    <img src="assets/logo.png" alt="" class="img-responsive" class="img-thumbnail">
+                </div>
+                <div class="col-md-6"><!-- MI ESLOGAN -->
+            <!-- Jumbotron Header -->
+            <header class="jumbotron hero-spacer">
+                <font face="broadway">
+                <h1 id="titulo"><CENTER>Bienvenidos</CENTER></h1></font>
+                <font color="#7FB3D5" face="century ghotic">
+                <p class="">En nuestra pagina encontras todo lo que necesitas saber.No dudes en registrate en nuestro "FORO", donde podras compartir tus experiencias y aprender de los demas. </p></font>
+            </div>
+            </header>
+        </div> <!-- FIN DE LA FILA PRINCIPAL -->
+            <hr>
+         <div class="row">     
+                 <blockquote class="pull-right">
+                    <img src="assets/comunicacion.png"/>
+                  <p class="titulo" id="secciones">FORO </p>
+                  <small>Navega por nuestra web y <cite title="y">descubre un mundo de diversión.</cite></small>
+                </blockquote>
+            </div>
+            <br><br>    
+        <!-- AQUI COMIENZA LA GALAERIA -->
+        <div class="row text-center">
+            <!-- PRIMER ELEMENTO DE LA GALERIA -->
+                <div class="col-md-3 col-sm-6 col-xs-12 hero-feature">
+                    <div class="thumbnail">
+                        <span class="help-block" id="titulo" ><p class="text-primary"><b>DEPORTES ACUATICOS</b></p></span>
+                        <img  class="img-rounded" src="assets/Collage-water-sports.jpg" class="img-responsive" alt="">
+                        <div class="caption">
+                            <h3 class="titulo"> Deportes de moda </h3>
+                            <p class="p">Los deportes acuaticos se practican por todo el mundo y, aunque algunos pueden ser de lo más complicado, en general todos son muy divertidos. Estos deportes se pueden practicar en lagos y embalses pero sobretodo en el mar.A continuacion encontras mas informacion detallada sobre cada uno de ellos.
+
+<p>
+                            <p> <a href="" class="btn btn-primary">Más información  </a></p>
+                        </div>
+                    </div>
+                </div>
+            <!-- SEGUNDO ELEMENTO -->
+                <div class="col-md-3 col-sm-6 col-xs-12 hero-feature">
+                    <div class="thumbnail">
+                        <span class="help-block" id="titulo"><p class="text-primary"><b> LA PESCA</b></p></span>
+                        <img  class="img-rounded" src="assets/collage-pesca.jpg" class="img-responsive" alt="">
+                        <div class="caption">
+                            <h3 class="titulo"> Mas que un hobby </h3>
+                            <p class="p">Se define como aquella actividad que se realiza para extraer pescado y/o otros organismos acuáticos. Muchos la consideran un deporte y otros un hobby, pero en cualquier caso, es uno de los que mas se practica en todo el mundo.<p>
+                            <p> <a href="" class="btn btn-primary">Más información  </a></p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- SEGUNDO ELEMENTO -->
+                <div class="col-md-3 col-sm-6 col-xs-12 hero-feature">
+                    <div class="thumbnail">
+                        <span class="help-block" id="titulo"><p class="text-primary"><b>EL TIEMPO</b></p></span>
+                        <img  class="img-rounded"  src="assets/tiempo.jpg" class="img-responsive" alt="">
+                        <div class="caption">
+                            <h3 class="titulo"> No olvides mirarlo </h3>
+                            <p class="p">Aqui encontraras todo la informacion metereologia que necesites. No olvides que para practicar tu deporte favorito, debe haber un clima adecuado, por ello no olvides mirar el tiempo antes de salir. Podras clasificar tu busqueda como prefieras, por comunidades,por ciudades...<p>
+                            <p> <a href="" class="btn btn-primary">Más información  </a></p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- SEGUNDO ELEMENTO -->
+                <div class="col-md-3 col-sm-6 col-xs-12 hero-feature">
+                    <div class="thumbnail">
+                        <span class="help-block" id="titulo"><p class="text-primary"><b>ULTIMAS NOTICIAS</b></p></span>
+                        <img  class="img-rounded"  src="assets/comunicacion_2.jpeg" class="img-responsive" alt="">
+                        <div class="caption">
+                            <h3 class="titulo">Noticias 24h</h3>
+                            <p class="p">Aqui encontraras toda la informacion acerca de la pesca y los deportes acuaticos. Obtendras toda la actualidad en un solo click. No olvides comentar tu opinion acerca de las noticias que te mostramos. Para nosotros tu opinion es importante. <p>
+                            <p> <a href="" class="btn btn-primary">Más información  </a></p>
+                        </div>
+                    </div>
+                </div>
+        
+            </div><!-- SEPARAMOS LA GALERIA DE LAS SECCIONES CON UN HR -->
+            <div class="clearfix visible-md"></div>
+                        <hr>
+
+                 <!-- GALERIA -->  
+            <div class="row">     
+                 <blockquote class="pull-right">
+                  <p class="titulo" id="galeria">Ultimas fotos.</p>
+                  <small>Nosotros nos llevamos una imagen <cite title="y">tu la experiencia.
+                    <br> No olvides mandarnos tus fotos para poder compartirlas con los demas</cite></small>
+                </blockquote>
+            </div>    
+   <!-- row galeria -->
+
+        <div class="row text-center">
+                <!-- PRIMER PANEL -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Pesca Submarina</h3>
+                      </div>
+                      <div class="panel-body">
+                        <a href="assets/submarina.jpg"> <img src="assets/submarina.jpg" class="img-responsive" ></a>
+                      </div>
+                    </div>
+                </div> 
+
+                <!-- SEGUNDO PANEL -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Padel Surf</h3>
+                      </div>
+                      <div class="panel-body">
+                        <a href="assets/submarina.jpg"><img src="assets/submarina.jpg" class="img-responsive" ></a>
+                      </div>
+                    </div>
+                </div>  
+                <!-- TERCER PANEL -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Kite Surf</h3>
+                      </div>
+                      <div class="panel-body">
+                        <a href="assets/submarina.jpg"><img src="assets/submarina.jpg" class="img-responsive" ></a>
+                      </div>
+                    </div>
+                </div>  
+                <!-- CUARTOPANEL -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Pesca Submarina</h3>
+                      </div>
+                      <div class="panel-body">
+                        <a href="assets/submarina.jpg"><img src="assets/submarina.jpg" class="img-responsive" ></a>
+                      </div>
+                    </div>
+                </div>
+                <!-- PRIMER PANEÑ -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-info">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Surfcasting</h3>
+                      </div>
+                      <div class="panel-body">
+                        <a href="assets/surfcasting.jpg"> <img src="assets/surfcasting.jpg" class="img-responsive" ></a>
+                      </div>
+                    </div>
+                </div> 
+
+                <!-- SEGUNDO PANEL -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-info">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Surfcasting</h3>
+                      </div>
+                      <div class="panel-body">
+                        <a href="assets/surfcasting.jpg"><img src="assets/surfcasting.jpg" class="img-responsive" ></a>
+                      </div>
+                    </div>
+                </div>  
+                <!-- TERCER PANEL -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-info">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Surfcasting</h3>
+                      </div>
+                      <div class="panel-body">
+                        <a href="assets/surfcasting.jpg"><img src="assets/surfcasting.jpg" class="img-responsive" ></a>
+                      </div>
+                    </div>
+                </div>  
+                <!-- CUARTOPANEL -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-info">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Surfcasting</h3>
+                      </div>
+                      <div class="panel-body">
+                        <a href="assets/surfcasting.jpg"><img src="assets/surfcasting.jpg" class="img-responsive" ></a>
+                      </div>
+                    </div>
+                </div>     
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-success">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Esqui Acuatico</h3>
+                      </div>
+                      <div class="panel-body">
+                        <a href="assets/esqui.jpg"> <img src="assets/esqui.jpg" class="img-responsive" ></a>
+                      </div>
+                    </div>
+                </div> 
+
+                <!-- SEGUNDO PANEL -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-success">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Esqui Acuatico</h3>
+                      </div>
+                      <div class="panel-body">
+                        <a href="assets/esqui.jpg"><img src="assets/esqui.jpg" class="img-responsive" ></a>
+                      </div>
+                    </div>
+                </div>  
+                <!-- TERCER PANEL -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-success">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Esqui Acuatico</h3>
+                      </div>
+                      <div class="panel-body">
+                        <a href="assets/esqui.jpg"><img src="assets/esqui.jpg" class="img-responsive" ></a>
+                      </div>
+                    </div>
+                </div>  
+                <!-- CUARTOPANEL -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-success">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Esqui Acuatico</h3>
+                      </div>
+                      <div class="panel-body">
+                        <a href="assets/esqui.jpg"><img src="assets/esqui.jpg" class="img-responsive" ></a>
+                      </div>
+                    </div>
+                </div>                          
+   <!--fin row galeria-->
+        </div>
+            <hr>
+             <blockquote class="pull-right">
+                  <p class="titulo" id="carrusel">¿Te gusta lo que ves?.</p>
+                  <small>Enamorate <cite title="y">con nuestro entorno.</cite></small>
+                </blockquote>
+
+    <!-- CARRUSEL -->   
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1" ></li>
+                    <li data-target="#myCarousel" data-slide-to="2" ></li>
+                    <li data-target="#myCarousel" data-slide-to="3" ></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active" align="center">
+                        <img class="img-responsive" src="assets/pira.jpg" alt="Responsive image" >
+                    </div>
+
+                    <div class="item" align="center">
+                        <img class="img-responsive" src="assets/deportes.jpg" alt="Responsive image">
+                    </div>
+
+                    <div class="item" align="center">
+                        <img  class="img-responsive" src="assets/body.jpg" alt="Responsive image">
+                    </div>
+
+                    <div class="item" align="center">
+                        <img  class="img-responsive" src="assets/body.jpg" alt="Responsive image">
+                    </div>
+
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div> 
+
+     <!-- FIN CARRUSEL -->    
+                 <hr>           
+                  <blockquote class="pull-right">
+                  <p class="titulo" id="about">¿Quienes somos?.</p>
+                  <small>Conoce lo que hacemos y <cite title="y">disfruta de ello.</cite></small>
+                </blockquote>
+        
+            <div class="row">
+                <div class="col-md-8"> <!-- LOGO -->
+                    <img src="assets/logo.png" alt="" class="img-responsive" class="img-thumbnail">
+                </div>
+                <div class="col-md-4">
+                    <div class="page-header">
+                      <h1 class="titulo">Aqua Sport Service <br><small>Un oceano de diversión</small></h1>
+                    </div>
+                    <address>
+                          <strong>AquaSport S.L.</strong><br>
+                          Avenida Principal 123<br>
+                          Punta Umbría, Huelva 21100<br>
+                          <abbr title="Phone">Tel:</abbr> 9XX 123 456
+                        </address>
+                         
+                        <address>
+                          <strong>Nuñez Gil Cristina</strong><br>
+                          <a href="mailto:#">cristiina_cng@gmail.com</a>
+                        </address>                 
+                </div>
+
+             </div>
+    <!-- LOGO E INFORMACION -->     
+             <div class="row">
+                 <div class="col-md-6">
+                <!-- Jumbotron Header -->
+                    <header class="jumbotron hero-spacer">
+                        <h1 id="titulo">Actualidad</h1>
+                        <p class="p">
+La situación política actual en España está muy influenciada por la situación económica. Inevitablemente la adaptación de las empresas a los cambios se hace dificil. Por un lado, las constantes modificaciones legales obligan a pequeñas empresas y autónomos a depender de asesoramiento profesional cualificado para adaptarse a las mismas. Por otro lado la gran incertidumbre a corto plazo dificulta una planificación fiscal y laboral adecuada.</p>               
+                    </header>
+                 </div> 
+                <div class="col-md-6"><!-- MI ESLOGAN -->
+                    <header class="jumbotron hero-spacer">
+                        <h1 id="titulo">Nuestro equipo</h1>
+                        <p class="p">La plantilla inicial estará compuesta por cinco trabajadores, uno que desarrollará la actividad de dirección técnica y cuatro monitores de deportes náuticos que, además de efectuar tareas de monitor, realizarán el mantenimiento de los materiales y equipos. La tarea de mantenimiento podrá ser cubierta en el futuro por un nuevo puesto de trabajo cuya única dedicación sea el mantenimiento de los equipos e instalaciones así como la concienciación con el entorno.</p>               
+                    </header>
+                 </div>           
+             </div>
+
+                <div class="row"> 
+                    <div class="col-md-8">
+                        <h1 id="titulo">Localizanos</h1>     
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m11!1m3!1d867.6221713936192!2d-6.9719144254218195!3d37.193907871448914!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2ses!4v1457894863724" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>                  
+                    </div>
+                    <div class="col-md-4">
+                        <h1 id="titulo">Estamos en</h1>
+                           <p class="p">Nuestra responsabilidad social corporativa se basa en el compromiso con la sociedad y por eso queremos estar cerca de ella. Para ponerte en contacto con nosotros puedes seguirnos en: </p>  <br>
+                      
+    <a href="URL-FACEBOOK" target="_blank"><img alt="siguenos en facebook" height="48" src="http://4.bp.blogspot.com/-LnKbkk802kw/UiXwV9rN8xI/AAAAAAAAB0Y/fQCQKFEbvjM/s1600/face.png" title="siguenos en facebook" width="48" /></a>
+
+  <a href="URL-Google+" target="_blank"><img alt="siguenos en Google+" height="48" src="http://3.bp.blogspot.com/-IwxItZ1_cM0/UiX0-g2DrCI/AAAAAAAAB1c/hOSA6Uklo-I/s1600/Google%252B+alt.png" title="siguenos en Google+" width="48" /></a>
+  <a href="URL-Twitter" target="_blank"><img alt="siguenos en Twitter" height="48" src="http://2.bp.blogspot.com/-CaF1EOBAWj4/UiX1AxmkZuI/AAAAAAAAB2Y/IioIplosXNo/s1600/Twitter+NEW.png" title="siguenos en Twitter" width="48" /></a>
+                                <br><br>
+    <a href="URL-Likedin" target="_blank"><img alt="Sígueme en Likedin" height="48" src="http://1.bp.blogspot.com/-ARpGBWO-1aQ/UiX1EC38NTI/AAAAAAAAB3w/Q7QBMn9EKr4/s1600/linkedin_logo_ok.png" title="Sígueme en Likedin" width="48" /></a>
+    <a href="URL-Rss" target="_blank"><img alt="Rss feed" height="48" src="http://4.bp.blogspot.com/-7tpKk7iSjm4/UiX0_B8Ca_I/AAAAAAAAB1w/U29whuID1rs/s1600/RSS+Feed.png" title="Rss feed" width="48" /></a>
+    <a href="URL-Instagram" target="_blank"><img alt="sígueme en Instagram" height="48" src="http://2.bp.blogspot.com/-6o2p2ehwMU4/UidPFSMM0vI/AAAAAAAAB_w/0v1pGNm_Dyg/s1600/instagram2.png" title="sígueme en Instagram" width="48" /></a>
+    <br><br>
+    <a href="URL-Blogger" target="_blank"><img alt="sígueme en Blogger" height="48" src="http://4.bp.blogspot.com/-_GfJKMsFbeI/UiX09555KQI/AAAAAAAAB1I/V9niQPJIQY4/s1600/Google+Blogger.png" title="sígueme en Blogger" width="48" /></a>
+    <a href="URL-Flickr" target="_blank"><img alt="sígueme en Flickr" height="48" src="http://2.bp.blogspot.com/-CDDoEKE1eG8/UiX0_2VXcGI/AAAAAAAAB4E/X90DiS5XbY8/s1600/Sin+t%25C3%25ADtulo.png" title="sígueme en Flickr" width="48" /></a>
+<a href="URL-Myspace" target="_blank"><img alt="sígueme en Myspace" height="48" src="http://4.bp.blogspot.com/-kUueWhPFuyQ/UiX1EmKVcbI/AAAAAAAAB4A/eJu5q3ZZRRk/s1600/myspace+alt.png" title="sígueme en Myspace" width="48" /></a>
+<br><br>
+<a href="URL-Skype" target="_blank"><img alt="sígueme en Skype" height="48" src="http://4.bp.blogspot.com/-F6FvF9QdUBM/UieBuShqlzI/AAAAAAAACEI/vuh7PgLKQ9w/s1600/skype2.png" title="sígueme en Skype" width="48" /></a>
+<a href="URL-Reddit" target="_blank"><img alt="sígueme en Reddit" height="48" src="http://4.bp.blogspot.com/-5syTd5ABXLE/UiX0_Z2MT-I/AAAAAAAAB1s/an5fkJZw7ok/s1600/Reddit.png" title="sígueme en Reddit" width="48" /></a>
+<a href="URL-Picasa" target="_blank"><img alt="sígueme en Picasa" height="48" src="http://2.bp.blogspot.com/-E63iTQsgbJ8/UidinzXB60I/AAAAAAAACBc/YRkO7ll17Vc/s1600/picasa2.png" title="sígueme en Picasa" width="48" /></a>
+
+
+                    </div>
+                </div>       
+
+            <!-- AQUI TERMINA EL LOGO Y LA INFORMACION-->
+                      <hr> 
+              <div class="row">          
+                  <blockquote class="pull-right">
+                  <p class="titulo" id="registro">Registrate!.</p>
+                  <small>Registrate en nuestra web y <cite title="y">consulta lo que quieras!.</cite></small>
+                </blockquote>
+            </div>
+            <hr>
+            
+            <div class="row"> 
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="sr-only" for="ejemplo_email_2">Email</label>
+                <input type="email" class="form-control" id="ejemplo_email_2"
+                       placeholder="Introduce tu email">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="ejemplo_password_2">Contraseña</label>
+                <input type="password" class="form-control" id="ejemplo_password_2" 
+                       placeholder="Contraseña">
+              </div>
+                <div class="form-group">
+                    <label>Sexo:</label>
+                    <input type="checkbox"> Mujer
+                    <input type="checkbox"> Hombre
+              </div>
+            </div>
+            <div>
+            <div class="row"> 
+            <div class="col-md-6">
+              <div class="form-group">
+                 <input type="text" id="edad" class="form-control" name="edad"  placeholder="edad"/>
+              </div>
+              <div class="form-group">
+                <input type="text" id="correo" class="form-control" name="correo" placeholder="estado civil"/>
+             </div>
+            <input type="text" id="telefono" class="form-control" name="telefono" placeholder="telefono"/>
+                </div>   
+            </div>
+            </div>
+            <center><button type="button" class="btn btn-info">Registrate</button>   </center>                 
+ 
+
+                <!-- PIE DE PAGINA -->
+                        <hr>
+                       <center> <p><a class="btn btn-primary btn-large" id="subir">Subir al cielo!</a>
+                </p> </center>
+
+                <script type="text/javascript">
+                    $("#subir").click(function () {
+                        $('body,html').animate({scrollTop: 0}, 500);
+                    });
+                    $("#btnlogo").click(function(){
+                        $('body,html').animate({scrollTop: 0}, 500);
+                    });
+                </script>
+         </div><!-- FIN DEL CONTENDOR PRINCIPAL DE LA WEB -->   
+</body>
+</html>
