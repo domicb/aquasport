@@ -7,9 +7,9 @@
 
     <title>Login</title>
 
-     <link href="<?=base_url()?>Assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?=base_url()?>Assets/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="<?=base_url()?>Assets/css/styles.css">
+     <link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/css/styles.css">
 </head>
 
 <body>
