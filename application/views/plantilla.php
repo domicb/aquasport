@@ -88,12 +88,7 @@
                                 Saber mas!</a>
 
                         </li>
-                        <li>
-                            <a href="https://pescacng.wordpress.com" target="_blank" id="btnwordpress"> <img src="<?=base_url()?>assets/logowordpress .png"> 
 
-                                Wordpress!</a>
-
-                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
