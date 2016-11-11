@@ -24,7 +24,7 @@ class Login extends CI_Controller
                  if($this->Usuarios_model->ValidarUsuario($ema,$pass))
                  {//si no estaba logeado pero si esta en la base de datos le damos acceso con set_userdata
                      $this->session->set_userdata('username',$ema);
-                     redirect(base_url());
+                     redirect(base_url().'index.php/Upload');
                  }
                  else
                  {//si no tiene cuenta lo mandamos de nuevo al login
