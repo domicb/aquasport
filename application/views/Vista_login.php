@@ -7,7 +7,7 @@
 
     <title>Login</title>
 
-     <link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="<?=base_url()?>assets/css/styles.css">
 </head>
@@ -19,7 +19,7 @@
             <div class="col-md-4" id="login">
                 <form class="form-signin" role="form" action="<?=base_url()?>index.php/Login/" method="POST">
                     <div class="text-center">
-                        <img id="avatar" src="<?=base_url()?>Assets/img/nadie.png" alt="avatar">
+                        <img id="avatar" src="<?=base_url()?>assets/img/nadie.png" alt="avatar">
                     </div>
                     <input id="txtEmail" type="email" name="username" class="form-control" placeholder="Email">
                     <input type="password" class="form-control" name="password" placeholder="Password">
@@ -33,10 +33,10 @@
         <a href="<?=base_url().'index.php/Usuarios_ci/contra'?>">Restablecer contraseña</a>           
         <a href="<?=base_url()?>">Volver a inicio</a>   
     </div>
-    <script src="<?=base_url()?>Assets/js/jquery.js"></script>
-    <script src="<?=base_url()?>Assets/js/jquery.md5.min.js"></script>
-     <script src="<?=base_url()?>Assets/js/bootstrap.min.js"></script>
-    <script src="<?=base_url()?>Assets/js/script.js"></script>
+    <script src="<?=base_url()?>assets/js/jquery.js"></script>
+    <script src="<?=base_url()?>assets/js/jquery.md5.min.js"></script>
+     <script src="<?=base_url()?>assets/js/bootstrap.min.js"></script>
+    <script src="<?=base_url()?>assets/js/script.js"></script>
 </body>
 
 </html>

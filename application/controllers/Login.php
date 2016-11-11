@@ -3,7 +3,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
  
 class Login extends CI_Controller
 {
-    public function __construct()
+   public function __construct()
     {
         parent::__construct();
 	$this->load->model('Usuarios_model');
@@ -32,8 +32,8 @@ class Login extends CI_Controller
                  }
             }
             
-            $carro = $this->load->view('Vista_login','',true);
-            $this->load->view('Plantilla_carro',Array('carro'=>$carro));
+            $cuerpo = $this->load->view('Vista_login','',true);
+            $this->load->view('plantilla',Array('cuerpo'=>$cuerpo));
         }
         public function logout()
         {
