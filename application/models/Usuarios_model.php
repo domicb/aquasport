@@ -130,5 +130,18 @@ class Usuarios_model extends CI_Model {
         $this->db->where('idusuario', $id,'aleatorio',$aleatorio);
         $this->db->update('usuario', $data);
     }
+        //FUNCIÓN PARA DEVOLVER LOS DATOS DE LOS ARTICULOS
+    public function get_articulos($por_pagina, $segmento) {
+        $query = $this->db->get('imagenes', $por_pagina, $segmento);
+        
+        //$this->db->where('inicio', valor, 'fin',valor);
+        
+        return $query->result_array();
+    }
+    
+    function filas() {
+        $consulta = $this->db->get('imagenes');
+        return $consulta->num_rows();
+    }
 
 }
