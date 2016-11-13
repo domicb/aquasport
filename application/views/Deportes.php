@@ -1,4 +1,4 @@
- <!-- Page Content -->
+<!-- Page Content -->
         <div class="container">
 
             <div class="row">
@@ -45,18 +45,17 @@
 
             <div class="row">
              
-    <?php $contador = 0; foreach ($articulos as $key => $articulo):  $contador ++;?>   
                 <div class="col-sm-4 col-lg-4 col-md-4">
                     <div class="thumbnail">
-                        <img src="<?=base_url()?>uploads/<?= $articulo['ruta']?>" alt="Licencia de pesca">
+                        <img src="" alt="Licencia de pesca">
                         <div class="caption">
-                            <h4 class="pull-right"><?= $articulo['autor'] ?> &copy;</h4>
-                            <h4><a href="#"><?= $articulo['titulo'] ?></a>
+                            <h4 class="pull-right">Cristina &copy;</h4>
+                            <h4><a href="#">Titulo</a>
                             </h4>
-                            <p><?= substr($articulo['cuerpo'], 0, 200) ?><!--<a target="_blank" href="http://www.pescacng.info/foropesca/">el foro</a></p>-->
+                            <p>Contenido<a target="_blank" href="http://www.pescacng.info/foropesca/">el foro</a></p>
                         </div>
                         <div class="ratings">
-                          <!-- AQUI PODRíAMOS AÑADIR UN BOTON DE FACEBOOK O TWTER
+                           AQUI PODRíAMOS AÑADIR UN BOTON DE FACEBOOK O TWTER
                           <p class="pull-right">15 reviews</p>
                             <p>
                                 <span class="glyphicon glyphicon-star"></span>
@@ -64,13 +63,11 @@
                                 <span class="glyphicon glyphicon-star"></span>
                                 <span class="glyphicon glyphicon-star"></span>
                                 <span class="glyphicon glyphicon-star"></span>
-                            </p>-->
+                            </p>
                         </div>
                     </div>
                 </div>
-                <?php endforeach;?>
-                <div class="row text-center">
-    <?php echo $this->pagination->create_links() ?></div>
+                <div class="row text-center"></div>
 </div>
             </div>
 
