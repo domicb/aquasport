@@ -40,19 +40,19 @@
 ));?>
   <div class="form-group">
     <label><b>Título : </b></label><input type="text"  class="sr-only" name="titulo" value="<?php echo set_value('titulo') ?>" />
-     <label><b>Enlace al foro : </b><input type="text" name="enlace" value="<?php echo set_value('enlace') ?>" />
     <label><b>Autor : </b></label><input type="text" name="autor" value="<?php echo set_value('autor') ?>" />
-    </div><b>
- </div>
-         <label><b>Categoria : </b></label>
+    
+                 <label><b>Categoria : </b></label>
         <select name="categoria" class="form-control">
                             <option value='noticias'>Noticias</option>
                             <option value='articulos'>Articulos</option>
                             <option value='deportes'>Deportes</option>
                             <option value='deportes'>Recetas</option>
         </select>
- <small><h3>Introduce aquí el cuerpo del articulo<h3></small>
+    </div>
+ </div>
     <hr/>
+    <small><h3>Introduce aquí el cuerpo del articulo<h3></small>
     <div id="alerts"></div>
     <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
       <div class="btn-group">
