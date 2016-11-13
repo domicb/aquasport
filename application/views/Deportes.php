@@ -47,25 +47,34 @@
              
                 <div class="col-sm-4 col-lg-4 col-md-4">
                     <div class="thumbnail">
-                        <img src="" alt="Licencia de pesca">
+                        <img src="<?=base_url()?>assets/kitesurf1.jpg" alt="Deportes acuáticos">
                         <div class="caption">
                             <h4 class="pull-right">Cristina &copy;</h4>
-                            <h4><a href="#">Titulo</a>
+                            <h4><a href="#">Kitesurfing</a>
                             </h4>
-                            <p>Contenido<a target="_blank" href="http://www.pescacng.info/foropesca/">el foro</a></p>
+
+                            <p>En este deporte, se combina el surf con el parapente...(Mas info en: 
+                                <a target="_blank" href="http://www.pescacng.info/foropesca/">el foro)</a>
+                               </p>
                         </div>
                         <div class="ratings">
-                           AQUI PODRíAMOS AÑADIR UN BOTON DE FACEBOOK O TWTER
-                          <p class="pull-right">15 reviews</p>
+
+                          <p class="pull-right"></p>
                             <p>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
+                                <div class="fb-like" data-href="https://www.pescacng.info/index.php/Deportes/"
+                                 data-layout="standard" data-action="like" data-size="small" 
+                                 data-show-faces="true" data-share="true"></div>
                             </p>
                         </div>
+        
                     </div>
+                                   <p> <a href="https://www.facebook.com/profile.php?id=100013947528486" target="_blank"><img alt="siguenos en facebook"
+                            height="28" src="http://4.bp.blogspot.com/-LnKbkk802kw/UiXwV9rN8xI/AAAAAAAAB0Y/fQCQKFEbvjM/s1600/face.png" 
+                            title="siguenos en facebook" width="28" /></a>
+                            <a href="https://twitter.com/aquasportinfo" target="_blank"><img alt="siguenos en Twitter" 
+                            height="28" src="http://2.bp.blogspot.com/-CaF1EOBAWj4/UiX1AxmkZuI/AAAAAAAAB2Y/IioIplosXNo/s1600/Twitter+NEW.png" title="siguenos en Twitter" 
+                            width="28" /></a></p>
+
                 </div>
                 <div class="row text-center"></div>
 </div>
