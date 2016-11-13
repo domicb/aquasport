@@ -44,5 +44,6 @@
     <h3><?=$titulo?></h3>
     <img src="<?=base_url()?>uploads/thumbs/<?=$imagen?>" />
 </div>
+<?=$cuerpo?>
 </body>
 </html>

@@ -117,7 +117,7 @@
 <script>
 $(document).ready(function(){
     $("#btn1").click(function(){        
-        $("#esto").val($("#editor").text());
+        $("#esto").val($("#editor").html());
     });
 });
 </script>
