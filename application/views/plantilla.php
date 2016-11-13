@@ -9,16 +9,16 @@
             });
         </script>
         <meta charset="UTF-8">
-        <link rel="shortcut icon" tipe="img/x-icon" href="<?=base_url()?>assets/pesca.png" />
+        <link rel="shortcut icon" tipe="img/x-icon" href="<?= base_url() ?>assets/pesca.png" />
         <title>  Pesca info  </title>
         <meta name="description" content="Foro pesca, pesca online, como pescar">
         <!-- NOS HEMOS DECANTADO POR UTILIZAR EL CDN DE BOOSTRAP -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
         <!-- CDN MATERIALIZE -->
-         <!-- Compiled and minified CSS -->
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <!-- Compiled and minified CSS -->
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -56,68 +56,56 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a id="btnlogo" href="<?=base_url()?>"> <img src="<?=base_url()?>assets/casa.png">
-
+                            <a id="btnlogo" href="<?= base_url() ?>"> <img src="<?= base_url() ?>assets/casa.png">
                                 Bienvenido</a>
                         </li>
 
                         <li>
-                            <a id="btnsecciones"> <img src="<?=base_url()?>assets/grafico-de-sectores.png">
-
+                            <a id="btnsecciones"> <img src="<?= base_url() ?>assets/grafico-de-sectores.png">
                                 Secciones</a>
                         </li>
                         <li>
-                            <a id="btngaleria"><img src="<?=base_url()?>assets/galeria.png">
-
+                            <a id="btngaleria"><img src="<?= base_url() ?>assets/galeria.png">
                                 Galeria</a>
-                        </li>      
-
+                        </li>    
                         <li>
-                            <a id="btneltiempo"><img src="<?=base_url()?>assets/sol.png">
-
+                            <a id="btneltiempo"><img src="<?= base_url() ?>assets/sol.png">
                                 El Tiempo</a>
                         </li>                                                                 
                         <li>
-                            <a id="btnabout"> <img src="<?=base_url()?>assets/social.png">
-
+                            <a id="btnabout"> <img src="<?= base_url() ?>assets/social.png">
                                 Quienes somos</a>
                         </li>
                         <li>
-                            <a id="btnsabermas"> <img src="<?=base_url()?>assets/portafolios-con-lapiz.png">
-
+                            <a id="btnsabermas"> <img src="<?= base_url() ?>assets/portafolios-con-lapiz.png">
                                 Saber mas!</a>
-
                         </li>
-
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
             <!-- /.container -->
         </nav>
-        <body>
-            <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8&appId=1827996470779055";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-            <br>
-            <hr>
-            <br>
-            
-                        <span id="aqui">
-                <!-- AQUI VA EL CUERPO CON PHP -->
-                <?php
-                if (isset($cuerpo)) {
-                    echo $cuerpo;
-                } else {
-                    echo 'array vacio';
-                }
-                ?>
-            </span>
-        </body>
-        
+    <body>
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8&appId=1827996470779055";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+        <br><hr><br>
+        <span id="aqui">
+            <!-- AQUI VA EL CUERPO CON PHP -->
+            <?php
+            if (isset($cuerpo)) {
+                echo $cuerpo;
+            } else {
+                echo 'array vacio';}
+            ?>
+        </span>
+    </body>
 </html>
