@@ -7,7 +7,6 @@
                     <p class="lead"><a href="http://www.pescacng.info/foropesca">Entra al foro</a></p>
                     <div class="list-group">
                         <a href="#" class="list-group-item">Videos y Tutoriales</a>
-                        <a href="#" class="list-group-item">Fotos de usuarios</a>
                         <a href="#" class="list-group-item">Articulos</a>
                          <a href="#" class="list-group-item">Noticias</a>
                     </div>
@@ -53,9 +52,12 @@
                             <h4 class="pull-right"><?= $articulo['autor'] ?> &copy;</h4>
                             <h4><a href="#"><?= $articulo['titulo'] ?></a>
                             </h4>
-                            <p><?= substr($articulo['cuerpo'], 0, 2800) ?><!--<a target="_blank" href="http://www.pescacng.info/foropesca/">el foro</a></p>-->
+                            <p><?= substr($articulo['cuerpo'], 0, 2000) ?></p>
                         </div>
                         <div class="ratings">
+                        <p><?php if($articulo['enlace']!=''): ?>
+                             <a href="<?=$articulo['enlace']?>"target="_blank">Sigue leyendo... </a></p>
+                            <?php endif;?>
                           <!-- AQUI PODRíAMOS AÑADIR UN BOTON DE FACEBOOK O TWTER
                           <p class="pull-right">15 reviews</p>
                             <p>

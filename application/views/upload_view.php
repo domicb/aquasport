@@ -39,18 +39,19 @@
     'role' => 'search'
 ));?>
   <div class="form-group">
-    <label>Título:</label><input type="text"  class="sr-only" name="titulo" />
-        <label>Categoria:</label>
+    <label><b>Título : </b></label><input type="text"  class="sr-only" name="titulo" />
+     <label><b>Enlace al foro : </b><input type="text" name="enlace" />
+    <label><b>Autor : </b></label><input type="text" name="autor" />
+    </div><b>
+ </div>
+         <label><b>Categoria : </b></label>
         <select name="categoria" class="form-control">
                             <option value='noticias'>Noticias</option>
                             <option value='articulos'>Articulos</option>
                             <option value='deportes'>Deportes</option>
                             <option value='deportes'>Recetas</option>
         </select>
-    <label>Autor:</label><input type="text" name="autor" />
-    </div>
- </div>
- <small>Introduce aquí el cuerpo del articulo</small>
+ <small><h3>Introduce aquí el cuerpo del articulo<h3></small>
     <hr/>
     <div id="alerts"></div>
     <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
@@ -111,7 +112,7 @@
     <div id="editor">
       Go ahead&hellip;
     </div>
-    <label>Imagen principal:</label><input type="file" name="userfile" /><br /><br />
+    <label><b>Imagen principal:</b></label><input type="file" name="userfile" /><br /><br />
     <input type="submit" id="btn1" value="Subir artículo" />
 <?=form_close()?>
 <script>
