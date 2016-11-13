@@ -5,10 +5,10 @@
 <title>Documento sin t&iacute;tulo</title>
 <style>
     #formulario_imagenes{
-        width: 500px;
+        width: 600px;
         padding: 20px 0px 20px 120px;
         margin: 100px 0px 0px 350px;
-        background-color: teal;
+        background-color: darkgray;
         color: #fff;
     }
     label{
@@ -38,8 +38,7 @@
     <span><?php echo validation_errors(); ?></span>
 <?=form_open_multipart(base_url()."index.php/Upload/do_upload")?>
     <label>Título:</label><input type="text" name="titulo" />
-    <label>Descripción:</label><input type="text" name="des" />
-    <label>Categoria:</label>
+        <label>Categoria:</label>
         <select name="categoria" class="form-control">
                             <option></option>
                             <option value='noticias'>Noticias</option>
@@ -48,7 +47,7 @@
         </select>
     <label>Autor:</label><input type="text" name="autor" />
     <label>Cuerpo:</label><textarea rows="12" cols="60" wrap="soft" name="cuerpo">Texto que aparece ya escrito de antemano</textarea>
-    <label>Imagen 1:</label><input type="file" name="userfile" /><br /><br />
+    <label>Imagen principal:</label><input type="file" name="userfile" /><br /><br />
     <input type="submit" value="Subir artículo" />
 <?=form_close()?>
 </div>
