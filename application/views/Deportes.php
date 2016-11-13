@@ -6,7 +6,7 @@
                 <div class="col-md-3">
                     <p class="lead"><a href="http://www.pescacng.info/foropesca">Entra al foro</a></p>
                     <div class="list-group">
-                        <a href="#" class="list-group-item">Videos y Tutoriales</a>
+                        <a href="https://www.youtube.com/channel/UCCKepeCXkZ1l6S3UsLVN_xw" class="list-group-item">Videos y Tutoriales</a>
                         <a href="#" class="list-group-item">Fotos de usuarios</a>
                         <a href="#" class="list-group-item">Articulos</a>
                          <a href="#" class="list-group-item">Noticias</a>
@@ -56,7 +56,7 @@
 
                             <p>En este deporte, se combina el surf con el parapente.La tabla permite al deportista presentar mayor
                              resistencia al aire y deslizarse sobre el agua mediante una tabla diseñada para tal efecto...(Mas info en: 
-                                <a target="_blank" href="http://www.pescacng.info/foropesca/">el foro)</a>
+                                <a target="_blank" href="http://www.pescacng.info/foropesca/viewtopic.php?f=20&t=6">el foro)</a>
                                </p>
                         </div>
                         <div class="ratings">
@@ -84,7 +84,7 @@
                             <p>Es la suspensión voluntaria de la respiración debajo del agua.En el buceo en apnea estas constantemente nadando, 
                                 reteniendo la respiración y buceando bajo el agua con sólo el aire de tus pulmones,
                              mientras tratas de cazar, tomar una foto o simplemente ver el mundo marino…(Mas info en: 
-                                <a target="_blank" href="http://www.pescacng.info/foropesca/">el foro)</a>
+                                <a target="_blank" href="http://www.pescacng.info/foropesca/viewtopic.php?f=20&t=7">el foro)</a>
                                </p>
                                <p>
                                 <div class="fb-like" data-href="https://www.pescacng.info/index.php/Deportes/"
@@ -105,9 +105,9 @@
                             <h4><a href="#">Surf</a>
                             </h4>
 
-                            <p>consiste en mantenerse en equilibrio, deslizandose sobre una  tabla, arrastrada por una ola, 
+                            <p>Consiste en mantenerse en equilibrio, deslizandose sobre una  tabla, arrastrada por una ola, 
                                 el mayor tiempo posible y sin caerse al agua dirigiéndola a traves una o varias quillas situadas 
-                                en la parte trasera de la tabla...(Mas info en: <a target="_blank" href="http://www.pescacng.info/foropesca/">el foro)</a>
+                                en la parte trasera de la tabla...(Mas info en: <a target="_blank" href="http://www.pescacng.info/foropesca/viewtopic.php?f=20&t=8">el foro)</a>
                                </p>
                                <p>
                                 <div class="fb-like" data-href="https://www.pescacng.info/index.php/Deportes/"
@@ -116,6 +116,28 @@
                             </p>
                                   
 
+                         </div>
+                        </div>
+                    </div>
+                    <!-- 4 cuadro de deporte-->
+                    <div class="col-sm-4 col-lg-3 col-md-3">
+                    <div class="thumbnail">
+                        <img src="<?=base_url()?>assets/piraguismo1.jpg" alt="Deportes acuáticos">
+                        <div class="caption">
+                            <h4 class="pull-right">Cristina &copy;</h4>
+                            <h4><a href="#">Piragüismo y Pesca en Kayak</a>
+                            </h4>
+
+                            <p>Es un deporte náutico en el que se pueden alcanzar grandes velocidades, 
+                                consiste en navegar con canoas o kayaks, propulsados a remo por una,
+                                 dos o cuatro tripulantes...(Mas info en: 
+                                 <a target="_blank" href="http://www.pescacng.info/foropesca/viewtopic.php?f=20&t=9">el foro)</a>
+                               </p>
+                               <p>
+                                <div class="fb-like" data-href="https://www.pescacng.info/index.php/Deportes/"
+                                 data-layout="standard" data-action="like" data-size="small" 
+                                 data-show-faces="true" data-share="true"></div>
+                            </p>
                          </div>
                         </div>
                     </div>
