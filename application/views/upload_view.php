@@ -39,6 +39,13 @@
 <?=form_open_multipart(base_url()."index.php/Upload/do_upload")?>
     <label>Título:</label><input type="text" name="titulo" />
     <label>Descripción:</label><input type="text" name="des" />
+    <label>Categoria:</label>
+        <select name="categoria" class="form-control">
+                            <option></option>
+                            <option value='noticias'>Noticias</option>
+                            <option value='articulos'>Articulos</option>
+                            <option value='deportes'>Deportes</option>
+        </select>
     <label>Autor:</label><input type="text" name="autor" />
     <label>Cuerpo:</label><textarea rows="12" cols="60" wrap="soft" name="cuerpo">Texto que aparece ya escrito de antemano</textarea>
     <label>Imagen 1:</label><input type="file" name="userfile" /><br /><br />

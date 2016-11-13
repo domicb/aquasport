@@ -49,8 +49,9 @@ class Upload extends CI_Controller {
             $descripcion = $this->input->post('des');
             $cuerpo = $this->input->post('cuerpo');
             $autor = $this->input->post('autor');
+            $categoria = $this->input->post('categoria');
             $imagen = $file_info['file_name'];
-            $subir = $this->Upload_model->subir($titulo,$imagen,$autor,$cuerpo,$descripcion);      
+            $this->Upload_model->subir($titulo,$imagen,$autor,$cuerpo,$descripcion,$categoria);      
             $data['titulo'] = $titulo;
             $data['imagen'] = $imagen;
             $this->load->view('imagen_subida_view', $data);
