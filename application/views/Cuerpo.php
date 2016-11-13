@@ -53,7 +53,7 @@
                             <h4 class="pull-right"><?= $articulo['autor'] ?> &copy;</h4>
                             <h4><a href="#"><?= $articulo['titulo'] ?></a>
                             </h4>
-                            <p><?= substr($articulo['cuerpo'], 0, 200) ?><!--<a target="_blank" href="http://www.pescacng.info/foropesca/">el foro</a></p>-->
+                            <p><?= substr($articulo['cuerpo'], 0, 2800) ?><!--<a target="_blank" href="http://www.pescacng.info/foropesca/">el foro</a></p>-->
                         </div>
                         <div class="ratings">
                           <!-- AQUI PODRíAMOS AÑADIR UN BOTON DE FACEBOOK O TWTER

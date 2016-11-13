@@ -17,8 +17,7 @@ class Upload extends CI_Controller {
     //FUNCIÓN PARA SUBIR LA IMAGEN Y VALIDAR EL TÍTULO
     function do_upload() {
         $this->form_validation->set_rules('titulo', 'titulo', 'required|min_length[5]|max_length[20]|trim|xss_clean');
-        $this->form_validation->set_rules('dres', 'descripcion', 'min_length[5]|max_length[50]|trim|xss_clean');
-        $this->form_validation->set_rules('cuerpo', 'cuerpo', 'required|min_length[35]|max_length[1120]|trim|xss_clean');
+        $this->form_validation->set_rules('cuerpo', 'cuerpo', 'required|min_length[35]|max_length[2800]|trim|xss_clean');
         $this->form_validation->set_rules('autor', 'autor', 'required|min_length[5]|max_length[20]|trim|xss_clean');
         $this->form_validation->set_message('required', 'El %s no puede ir vacío!');
         $this->form_validation->set_message('min_length', 'El %s debe tener al menos %s carácteres');
