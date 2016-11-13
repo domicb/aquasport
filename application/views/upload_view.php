@@ -31,17 +31,17 @@
 <div class="container">
   <div class="hero-unit">
    <div class="row"> <!--$ERROR MUESTRA LOS ERRORES QUE PUEDAN HABER AL SUBIR LA IMAGEN-->   
-    <?=@$error?>
+       <div class="alert alert-danger"><?=@$error?>
 
-    <span><?php echo validation_errors(); ?></span><!-- ENTRADA FORMULARIO -->
+    <?php echo validation_errors(); ?></div><!-- ENTRADA FORMULARIO -->
 <?=form_open_multipart(base_url()."index.php/Upload/do_upload",array(
     'class' => 'form-inline', 
     'role' => 'search'
 ));?>
   <div class="form-group">
-    <label><b>Título : </b></label><input type="text"  class="sr-only" name="titulo" />
-     <label><b>Enlace al foro : </b><input type="text" name="enlace" />
-    <label><b>Autor : </b></label><input type="text" name="autor" />
+    <label><b>Título : </b></label><input type="text"  class="sr-only" name="titulo" value="<?php echo set_value('titulo') ?>" />
+     <label><b>Enlace al foro : </b><input type="text" name="enlace" value="<?php echo set_value('enlace') ?>" />
+    <label><b>Autor : </b></label><input type="text" name="autor" value="<?php echo set_value('autor') ?>" />
     </div><b>
  </div>
          <label><b>Categoria : </b></label>
@@ -110,9 +110,10 @@
     <input type="hidden" value="por defecto" id="esto" name="cuerpo"/>
 <!-- DIV CUERPO -->
     <div id="editor">
-      Go ahead&hellip;
+      Empieza aquí tu entrada<?php echo set_value('cuerpo') ?>"
     </div>
-    <label><b>Imagen principal:</b></label><input type="file" name="userfile" /><br /><br />
+    <label><b>Imagen principal:</b></label><input type="file" name="userfile" id="ejemplo_archivo_1" /><br /><br />
+     <p class="help-block">La imagen seleccionada aparecerá como portada.</p>
     <input type="submit" id="btn1" value="Subir artículo" />
 <?=form_close()?>
 <script>

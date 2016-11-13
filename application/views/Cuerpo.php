@@ -6,9 +6,10 @@
                 <div class="col-md-3">
                     <p class="lead"><a href="http://www.pescacng.info/foropesca">Entra al foro</a></p>
                     <div class="list-group">
-                        <a href="#" class="list-group-item">Videos y Tutoriales</a>
+                        <a href="#" class="list-group-item">Videos</a>
                         <a href="#" class="list-group-item">Articulos</a>
                          <a href="#" class="list-group-item">Noticias</a>
+                         <a href="#" class="list-group-item">Recetas</a>
                     </div>
                 </div>
 
