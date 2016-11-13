@@ -44,8 +44,9 @@
             <hr>
 
             <div class="row">
-             
-                <div class="col-sm-4 col-lg-4 col-md-4">
+             <!-- 1cuadro de deporte-->
+
+                <div class="col-sm-4 col-lg-3 col-md-3">
                     <div class="thumbnail">
                         <img src="<?=base_url()?>assets/kitesurf1.jpg" alt="Deportes acuáticos">
                         <div class="caption">
@@ -53,7 +54,8 @@
                             <h4><a href="#">Kitesurfing</a>
                             </h4>
 
-                            <p>En este deporte, se combina el surf con el parapente...(Mas info en: 
+                            <p>En este deporte, se combina el surf con el parapente.La tabla permite al deportista presentar mayor
+                             resistencia al aire y deslizarse sobre el agua mediante una tabla diseñada para tal efecto...(Mas info en: 
                                 <a target="_blank" href="http://www.pescacng.info/foropesca/">el foro)</a>
                                </p>
                         </div>
@@ -68,21 +70,60 @@
                         </div>
         
                     </div>
-                                   <p> <a href="https://www.facebook.com/profile.php?id=100013947528486" target="_blank"><img alt="siguenos en facebook"
-                            height="28" src="http://4.bp.blogspot.com/-LnKbkk802kw/UiXwV9rN8xI/AAAAAAAAB0Y/fQCQKFEbvjM/s1600/face.png" 
-                            title="siguenos en facebook" width="28" /></a>
-                            <a href="https://twitter.com/aquasportinfo" target="_blank"><img alt="siguenos en Twitter" 
-                            height="28" src="http://2.bp.blogspot.com/-CaF1EOBAWj4/UiX1AxmkZuI/AAAAAAAAB2Y/IioIplosXNo/s1600/Twitter+NEW.png" title="siguenos en Twitter" 
-                            width="28" /></a></p>
-
                 </div>
-                <div class="row text-center"></div>
-</div>
-            </div>
+                    <!-- 2 CUADRO DE DEPORTE -->
 
-        </div>
+                    <div class="col-sm-4 col-lg-3 col-md-3">
+                    <div class="thumbnail">
+                        <img src="<?=base_url()?>assets/buceo.jpg" alt="Deportes acuáticos">
+                        <div class="caption">
+                            <h4 class="pull-right">Cristina &copy;</h4>
+                            <h4><a href="#">Buceo en Apnea</a>
+                            </h4>
 
-    </div>
+                            <p>Es la suspensión voluntaria de la respiración debajo del agua.En el buceo en apnea estas constantemente nadando, 
+                                reteniendo la respiración y buceando bajo el agua con sólo el aire de tus pulmones,
+                             mientras tratas de cazar, tomar una foto o simplemente ver el mundo marino…(Mas info en: 
+                                <a target="_blank" href="http://www.pescacng.info/foropesca/">el foro)</a>
+                               </p>
+                               <p>
+                                <div class="fb-like" data-href="https://www.pescacng.info/index.php/Deportes/"
+                                 data-layout="standard" data-action="like" data-size="small" 
+                                 data-show-faces="true" data-share="true"></div>
+                            </p>
+                                  
+
+                         </div>
+                        </div>
+                    </div>
+                    <!-- 3cuadreo de deporte -->
+                    <div class="col-sm-4 col-lg-3 col-md-3">
+                    <div class="thumbnail">
+                        <img src="<?=base_url()?>assets/surf.jpg" alt="Deportes acuáticos">
+                        <div class="caption">
+                            <h4 class="pull-right">Cristina &copy;</h4>
+                            <h4><a href="#">Surf</a>
+                            </h4>
+
+                            <p>consiste en mantenerse en equilibrio, deslizandose sobre una  tabla, arrastrada por una ola, 
+                                el mayor tiempo posible y sin caerse al agua dirigiéndola a traves una o varias quillas situadas 
+                                en la parte trasera de la tabla...(Mas info en: <a target="_blank" href="http://www.pescacng.info/foropesca/">el foro)</a>
+                               </p>
+                               <p>
+                                <div class="fb-like" data-href="https://www.pescacng.info/index.php/Deportes/"
+                                 data-layout="standard" data-action="like" data-size="small" 
+                                 data-show-faces="true" data-share="true"></div>
+                            </p>
+                                  
+
+                         </div>
+                        </div>
+                    </div>
+                </div>
+
+        
+
+    
 <!-- /.container -->
 
 <div class="container">
