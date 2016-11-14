@@ -30,6 +30,7 @@
 <body>
 <div class="container">
   <div class="hero-unit">
+      <center><a href="<?=base_url()?>index.php/Landing">Volver a inicio</a></center>
    <div class="row"> 
        <!--$ERROR MUESTRA LOS ERRORES QUE PUEDAN HABER AL SUBIR LA IMAGEN-->   
        <?=@$error?>

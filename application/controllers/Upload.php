@@ -17,7 +17,7 @@ class Upload extends CI_Controller {
     }
 
     //FUNCIÓN PARA SUBIR LA IMAGEN Y VALIDAR EL TÍTULO
-    function do_upload() {
+    function do_upload($desde = 0) {
         $this->form_validation->set_rules('titulo', 'titulo', 'required|min_length[5]|max_length[50]|trim|xss_clean');
         $this->form_validation->set_rules('cuerpo', 'cuerpo', 'required|min_length[35]|max_length[8000]');
         $this->form_validation->set_rules('autor', 'autor', 'required|min_length[3]|max_length[50]|trim|xss_clean');
@@ -46,20 +46,34 @@ class Upload extends CI_Controller {
                 $this->_create_thumbnail($file_info['file_name']);
                 $data = array('upload_data' => $this->upload->data());
                 $titulo = $this->input->post('titulo');
-                $descripcion = $this->input->post('des');
                 $cuerpo = $this->input->post('cuerpo');
                 $autor = $this->input->post('autor');
                 $categoria = $this->input->post('categoria');
                 $enlace = $this->input->post('enlace');
                 $imagen = $file_info['file_name'];
-                $this->Upload_model->subir($titulo, $imagen, $autor, $cuerpo,$categoria,$enlace);
+                $this->Upload_model->subir($titulo, $imagen, $autor, $cuerpo, $categoria, $enlace);
                 $data['titulo'] = $titulo;
                 $data['imagen'] = $imagen;
                 $data['cuerpo'] = $cuerpo;
+                // VARIABLES NECESARIAS PARA PAGINAR
+                // $this->load->helper('url');
+                $pages = 4; //Número de registros mostrados por páginas
+                $this->load->library('pagination'); //Cargamos la librería de paginación
+                // parametro base de la aplicación, si tenemos un .htaccess nos evitamos el index.php
+                $config['base_url'] = site_url('/index.php/Articulos');
+                $config['total_rows'] = $this->Articulos_model->filas(); //calcula el número de filas 
+                $config['per_page'] = $pages; //Número de registros mostrados por páginas
+                $config['num_links'] = 20; //Número de links mostrados en la paginación
+                $config['first_link'] = 'Primera'; //primer link
+                $config['last_link'] = 'Última'; //último link
+                $config["uri_segment"] = 3; //el segmento de la paginación
+                $config['next_link'] = 'Siguiente'; //siguiente link
+                $config['prev_link'] = 'Anterior'; //anterior link
+                $this->pagination->initialize($config); //inicializamos la paginación	
                 //recojemos los articulos y los mostramos
-            $articulos = $this->Articulos_model->get_articulos(4,$desde);
-             $cuerpo = $this->load->view('Cuerpo',Array('articulos'=> $articulos),true);
-            $this->load->view('plantilla',Array('cuerpo'=>$cuerpo));
+                $articulos = $this->Articulos_model->get_articulos(4, $desde);
+                $cuerpo = $this->load->view('Cuerpo', Array('articulos' => $articulos), true);
+                $this->load->view('plantilla', Array('cuerpo' => $cuerpo));
             }
         } else {
             //SI EL FORMULARIO NO SE VÁLIDA LO MOSTRAMOS DE NUEVO CON LOS ERRORES
