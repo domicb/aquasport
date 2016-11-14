@@ -8,6 +8,7 @@ class Upload extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('Upload_model');
+        $this->load->model('Articulos_model');
     }
 
     function index() {
@@ -17,9 +18,9 @@ class Upload extends CI_Controller {
 
     //FUNCIÓN PARA SUBIR LA IMAGEN Y VALIDAR EL TÍTULO
     function do_upload() {
-        $this->form_validation->set_rules('titulo', 'titulo', 'required|min_length[5]|max_length[20]|trim|xss_clean');
+        $this->form_validation->set_rules('titulo', 'titulo', 'required|min_length[5]|max_length[50]|trim|xss_clean');
         $this->form_validation->set_rules('cuerpo', 'cuerpo', 'required|min_length[35]|max_length[8000]');
-        $this->form_validation->set_rules('autor', 'autor', 'required|min_length[5]|max_length[20]|trim|xss_clean');
+        $this->form_validation->set_rules('autor', 'autor', 'required|min_length[3]|max_length[50]|trim|xss_clean');
         $this->form_validation->set_message('required', 'El %s no puede ir vacío!');
         $this->form_validation->set_message('min_length', 'El %s debe tener al menos %s carácteres');
         $this->form_validation->set_message('max_length', 'El %s no puede tener más de %s carácteres');
@@ -55,7 +56,10 @@ class Upload extends CI_Controller {
                 $data['titulo'] = $titulo;
                 $data['imagen'] = $imagen;
                 $data['cuerpo'] = $cuerpo;
-                $this->load->view('imagen_subida_view', $data);
+                //recojemos los articulos y los mostramos
+            $articulos = $this->Articulos_model->get_articulos(4,$desde);
+             $cuerpo = $this->load->view('Cuerpo',Array('articulos'=> $articulos),true);
+            $this->load->view('plantilla',Array('cuerpo'=>$cuerpo));
             }
         } else {
             //SI EL FORMULARIO NO SE VÁLIDA LO MOSTRAMOS DE NUEVO CON LOS ERRORES

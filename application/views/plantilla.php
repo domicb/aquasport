@@ -61,23 +61,23 @@
                         </li>
 
                         <li>
-                            <a id="btnsecciones"> <img src="<?= base_url() ?>assets/grafico-de-sectores.png">
+                            <a id="btnsecciones" href="<?= base_url() ?>index.php/Landing/"> <img src="<?= base_url() ?>assets/grafico-de-sectores.png">
                                 Secciones</a>
                         </li>
                         <li>
-                            <a id="btngaleria"><img src="<?= base_url() ?>assets/galeria.png">
+                            <a id="btngaleria" href="<?= base_url() ?>index.php/Landing/"><img src="<?= base_url() ?>assets/galeria.png">
                                 Galeria</a>
                         </li>    
                         <li>
-                            <a id="btneltiempo"><img src="<?= base_url() ?>assets/sol.png">
+                            <a id="btneltiempo" href="<?= base_url() ?>index.php/Landing/"><img src="<?= base_url() ?>assets/sol.png">
                                 El Tiempo</a>
                         </li>                                                                 
                         <li>
-                            <a id="btnabout"> <img src="<?= base_url() ?>assets/social.png">
+                            <a id="btnabout" href="<?= base_url() ?>index.php/Landing/"> <img src="<?= base_url() ?>assets/social.png">
                                 Quienes somos</a>
                         </li>
                         <li>
-                            <a id="btnsabermas"> <img src="<?= base_url() ?>assets/portafolios-con-lapiz.png">
+                            <a id="btnsabermas" href="<?= base_url() ?>index.php/Landing/"> <img src="<?= base_url() ?>assets/portafolios-con-lapiz.png">
                                 Saber mas!</a>
                         </li>
                     </ul>

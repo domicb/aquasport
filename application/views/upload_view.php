@@ -30,10 +30,17 @@
 <body>
 <div class="container">
   <div class="hero-unit">
-   <div class="row"> <!--$ERROR MUESTRA LOS ERRORES QUE PUEDAN HABER AL SUBIR LA IMAGEN-->   
-       <div class="alert alert-danger"><?=@$error?>
-
-    <?php echo validation_errors(); ?></div><!-- ENTRADA FORMULARIO -->
+   <div class="row"> 
+       <!--$ERROR MUESTRA LOS ERRORES QUE PUEDAN HABER AL SUBIR LA IMAGEN-->   
+       <?=@$error?>
+       <?php if(validation_errors()!= null):?><div class="alert alert-danger">
+    <?php echo validation_errors(); ?>
+       </div>
+       <?php else :?>
+       <div class="alert alert-info">El titulo y autor no debería ser demasiado largo</div>
+           <div class="alert alert-info">La imagen de portada debe terner un nombre con no más de 10 caracteres</div>
+       <?php endif;?>
+       <!-- ENTRADA FORMULARIO -->
 <?=form_open_multipart(base_url()."index.php/Upload/do_upload",array(
     'class' => 'form-inline', 
     'role' => 'search'
@@ -110,7 +117,7 @@
     <input type="hidden" value="por defecto" id="esto" name="cuerpo"/>
 <!-- DIV CUERPO -->
     <div id="editor">
-      Empieza aquí tu entrada<?php echo set_value('cuerpo') ?>"
+      Empieza aquí tu entrada<?php echo set_value('cuerpo') ?>
     </div>
     <label><b>Imagen principal:</b></label><input type="file" name="userfile" id="ejemplo_archivo_1" /><br /><br />
      <p class="help-block">La imagen seleccionada aparecerá como portada.</p>

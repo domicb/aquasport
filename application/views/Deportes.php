@@ -4,7 +4,7 @@
             <div class="row">
 
                 <div class="col-md-3">
-                    <p class="lead"><a href="http://www.pescacng.info/foropesca">Entra al foro</a></p>
+                      <p class="lead"><a href="http://www.pescacng.info/foropesca">Ver contenido en el foro</a></p>
                     <div class="list-group">
                         <a href="https://www.youtube.com/channel/UCCKepeCXkZ1l6S3UsLVN_xw" class="list-group-item">Videos y Tutoriales</a>
                         <a href="#" class="list-group-item">Fotos de usuarios</a>

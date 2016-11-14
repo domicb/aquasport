@@ -26,7 +26,7 @@ class Articulos extends CI_Controller {
         $config['prev_link'] = 'Anterior';//anterior link
         $this->pagination->initialize($config); //inicializamos la paginación	   
    
-            $articulos = $this->Articulos_model->get_articulos($config,$desde);
+            $articulos = $this->Articulos_model->get_articulos(4,$desde);
              $cuerpo = $this->load->view('Cuerpo',Array('articulos'=> $articulos),true);
             $this->load->view('plantilla',Array('cuerpo'=>$cuerpo));
 	}
