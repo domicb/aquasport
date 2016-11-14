@@ -9,7 +9,7 @@ class Upload_model extends CI_Model {
     }
     
     //FUNCIÓN PARA INSERTAR LOS DATOS DE LA IMAGEN SUBIDA
-    function subir($titulo,$imagen,$autor,$cuerpo,$categoria,$enlace)
+    function subir($titulo,$imagen,$autor,$cuerpo,$categoria,$enlace,$descripcion)
     {
         $data = array(
             'titulo' => $titulo,
@@ -17,7 +17,8 @@ class Upload_model extends CI_Model {
             'cuerpo' => $cuerpo,
             'autor' => $autor,
             'categoria' => $categoria,
-            'enlace' => $enlace
+            'enlace' => $enlace,
+            'descripcion' =>$descripcion
         );
         return $this->db->insert('imagenes', $data);
     }

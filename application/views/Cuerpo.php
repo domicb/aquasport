@@ -1,8 +1,6 @@
 <!-- Page Content -->
 <div class="container">
-
     <div class="row">
-
         <div class="col-md-3">
             <p class="lead"><a href="http://www.pescacng.info/foropesca">Ver contenido en el foro</a></p>
             <div class="list-group">
@@ -12,11 +10,8 @@
                 <a href="#" class="list-group-item">Recetas</a>
             </div>
         </div>
-
         <div class="col-md-9">
-
             <div class="row carousel-holder">
-
                 <div class="col-md-12">
                     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -37,7 +32,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -45,8 +39,7 @@
 <hr>
 <div class="row">   
     <?php $contador = 0;
-    foreach ($articulos as $key => $articulo): $contador ++;
-        ?> 
+    foreach ($articulos as $key => $articulo): $contador ++;?> 
         <div class="col-sm-4 col-lg-3 col-md-3"><!-- COMIENZO PANEL -->
             <div class="thumbnail">
                 <img src="<?= base_url() ?>uploads/<?= $articulo['ruta'] ?>" alt="<?= $articulo['titulo'] ?>">
@@ -54,7 +47,7 @@
                     <h4 class="pull-right"><?= $articulo['autor'] ?> &copy;</h4>
                     <h4><a href="#"><?= $articulo['titulo'] ?></a>
                     </h4>
-                    <p><?= substr($articulo['cuerpo'], 0, 580) ?></p>
+                    <p><?= substr($articulo['descripcion'], 0, 500) ?></p>
                 </div>
                 <div class="ratings">
                     <p><?php if ($articulo['enlace'] != ''): ?>
@@ -65,24 +58,12 @@
                 </div>
             </div>   
         </div><!--CIERRE PANEL -->
-    <?php if ($contador == 1): ?><!-- SI es la primera vez hay que cerrar de nuevo-->
-        </div>
-    <?php endif; ?>
-<?php endforeach; ?>       
+    <?php endforeach; ?>  
+</div>
 <div class="row text-center"> <?php echo $this->pagination->create_links() ?> </div>
-
-</div>
-</div>
-
-</div>
-
-</div>
 <!-- /.container -->
-
 <div class="container">
-
     <hr>
-
     <!-- Footer -->
     <footer>
         <div class="row">

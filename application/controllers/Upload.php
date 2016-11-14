@@ -51,7 +51,8 @@ class Upload extends CI_Controller {
                 $categoria = $this->input->post('categoria');
                 $enlace = $this->input->post('enlace');
                 $imagen = $file_info['file_name'];
-                $this->Upload_model->subir($titulo, $imagen, $autor, $cuerpo, $categoria, $enlace);
+                $descripcion = $this->input->post('descripcion');
+                $this->Upload_model->subir($titulo, $imagen, $autor, $cuerpo, $categoria, $enlace,$descripcion);
                 $data['titulo'] = $titulo;
                 $data['imagen'] = $imagen;
                 $data['cuerpo'] = $cuerpo;
@@ -71,9 +72,7 @@ class Upload extends CI_Controller {
                 $config['prev_link'] = 'Anterior'; //anterior link
                 $this->pagination->initialize($config); //inicializamos la paginación	
                 //recojemos los articulos y los mostramos
-                $articulos = $this->Articulos_model->get_articulos(4, $desde);
-                $cuerpo = $this->load->view('Cuerpo', Array('articulos' => $articulos), true);
-                $this->load->view('plantilla', Array('cuerpo' => $cuerpo));
+                $this->load->view('imagen_subida_view',$data);
             }
         } else {
             //SI EL FORMULARIO NO SE VÁLIDA LO MOSTRAMOS DE NUEVO CON LOS ERRORES

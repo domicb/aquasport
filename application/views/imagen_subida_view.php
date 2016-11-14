@@ -31,6 +31,7 @@
 <body>
 <!--mostramos la información de la imagen-->
 <h3>Tu imagen fué subida correctamente!</h3>
+<a href="<?=base_url()?>index.php/Articulos"><h2>Pulsa para ver tu entrada publicada</h2></a>
 <div id="info_subida">
 <ul>
 <?php foreach ($upload_data as $item => $value):?>
