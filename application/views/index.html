@@ -313,31 +313,14 @@
             <!-- ELTIEMPO -->
             <br>
             <hr>
-            <div class="row">
-
-                <div class="col-md-3 col-sm-6 col-xs-12"> <iframe src="https://embed.windytv.com/?39.876,-3.164,6,menu,message,marker" width="750" height="500" frameborder="0"></iframe></div>
-                <div class="col-md-3 col-sm-6 col-xs-12"><script src="http://widget.windguru.cz/js/wg_widget.php" type="text/javascript"></script>
-                    <script language="JavaScript" type="text/javascript">
-                    //<![CDATA[
-                                WgWidget({
-                                    s: 48748, odh: 0, doh: 24, wj: 'knots', tj: 'c', waj: 'm', fhours: 72, lng: 'es',
-                                    params: ['WINDSPD', 'GUST', 'SMER', 'TMPE', 'CDC', 'APCPs'],
-                                    first_row: true,
-                                    spotname: true,
-                                    first_row_minfo: true,
-                                    last_row: true,
-                                    lat_lon: true,
-                                    tz: true,
-                                    sun: true,
-                                    link_archive: false,
-                                    link_new_window: false
-                                },
-                                        'wg_target_div_48748_78167241'
-                                        );
-                    //]]>
-                    </script>
-                    <div id="wg_target_div_48748_78167241"></div></div>
-                <div></div>
+            <div class="row"><center>
+                <!-- EL TIEMPO WIND --><p class="text-primary">La previsión según Windytv.</p>
+                <div class="col-md-8"><iframe src="https://embed.windytv.com/?39.876,-3.164,6,menu,message,marker" width="750" height="500" frameborder="0"></iframe></div></center> 
+                <div class="col-md-4"><p class="text-primary">Windytv nos proporciona información metorologica del mundo entero, pero no por ello es menos concreto pues podemos navegar justo al lugar de nuestro pesquero y comprovar la previsión para las proximas horas.<br> Los colores amarillos, naranjas y rojos nos ubican las zonas donde el viento sopla con más intensidad. Tambien podemos consultar otros valores cómo temperatura, nubes, olas o presión.</p>
+                    <img src="<?=base_url()?>assets/mundo.png" class="img-responsive" alt="El mundo a través de windytv"><p class="text-primary"> Windytv se actualiza 4 veces al día y por si fuera poco podemos consultar los mejores accesos a nuestro pesquero pues también se ve el mapa de carreteras.</p></div>       
+            </div>
+            <div class="row"><center><p class="text-primary">La previsión según Windguru.</p>            <!-- EL TIEMPO WINDGURU -->
+                <div class="col-md-8"> <iframe src="https://www.windguru.cz/int/distr_iframe.php?u=1169662&s=48748&c=533e531c1a" frameborder="0" width="800" height="380"></iframe></div> </center>         
             </div>
             <!-- FIN ELTIEMPO -->
             <br><br><br><br><br><br>
