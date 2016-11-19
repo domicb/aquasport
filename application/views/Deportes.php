@@ -1,17 +1,3 @@
-<!-- Page Content -->
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-md-3">
-                      <p class="lead"><a href="http://www.pescacng.info/foropesca">Ver contenido en el foro</a></p>
-                    <div class="list-group">
-                        <a href="https://www.youtube.com/channel/UCCKepeCXkZ1l6S3UsLVN_xw" class="list-group-item">Videos y Tutoriales</a>
-                        <a href="#" class="list-group-item">Fotos de usuarios</a>
-                        <a href="#" class="list-group-item">Articulos</a>
-                         <a href="#" class="list-group-item">Noticias</a>
-                    </div>
-                </div>
 
                 <div class="col-md-9">
 

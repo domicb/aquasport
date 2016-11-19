@@ -1,15 +1,4 @@
-<!-- Page Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-3">
-            <p class="lead"><a href="http://www.pescacng.info/foropesca">Ver contenido en el foro</a></p>
-            <div class="list-group">
-                <a href="https://www.youtube.com/channel/UCCKepeCXkZ1l6S3UsLVN_xw" class="list-group-item">Videos y Tutoriales</a>
-                <a href="#" class="list-group-item">Articulos</a>
-                <a href="#" class="list-group-item">Noticias</a>
-                <a href="#" class="list-group-item">Recetas</a>
-            </div>
-        </div>
+
         <div class="col-md-9">
             <div class="row carousel-holder">
                 <div class="col-md-12">
@@ -45,7 +34,7 @@
                 <img src="<?= base_url() ?>uploads/<?= $articulo['ruta'] ?>" alt="<?= $articulo['titulo'] ?>">
                 <div class="caption">
                     <h4 class="pull-right"><?= $articulo['autor'] ?> &copy;</h4>
-                    <h4><a href="#"><?= $articulo['titulo'] ?></a>
+                    <h4><a href="<?=base_url()?>index.php/Articulo/mostrar/<?=$articulo['id']?>"><?= $articulo['titulo'] ?></a>
                     </h4>
                     <p><?= substr($articulo['descripcion'], 0, 500) ?></p>
                 </div>

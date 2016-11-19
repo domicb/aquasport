@@ -56,7 +56,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a id="btnlogo" href="<?= base_url() ?>"> <img src="<?= base_url() ?>assets/casa.png">
+                            <a id="btnlogo" href="<?= base_url() ?>index.php/Landing"> <img src="<?= base_url() ?>assets/casa.png">
                                 Bienvenido</a>
                         </li>
 
@@ -98,6 +98,18 @@
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
         <br><hr><br>
+        <!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <p class="lead"><a href="http://www.pescacng.info/foropesca">Ver contenido en el foro</a></p>
+            <div class="list-group">
+                <a href="https://www.youtube.com/channel/UCCKepeCXkZ1l6S3UsLVN_xw" class="list-group-item">Videos y Tutoriales</a>
+                <a href="#" class="list-group-item">Articulos</a>
+                <a href="#" class="list-group-item">Noticias</a>
+                <a href="#" class="list-group-item">Recetas</a>
+            </div>
+        </div>
         <span id="aqui">
             <!-- AQUI VA EL CUERPO CON PHP -->
             <?php
@@ -107,5 +119,7 @@
                 echo 'array vacio';}
             ?>
         </span>
+    </div>
+</div>
     </body>
 </html>

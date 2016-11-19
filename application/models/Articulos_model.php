@@ -15,6 +15,16 @@ class Articulos_model extends CI_Model {
         return $query->result_array();
     }
     
+    //funcion para devolver un articulo
+    public function get_articulo($id)
+    {
+        $this->db->select('*');
+        $this->db->from('imagenes');
+        $this->db->where('id',$id);
+        $query =  $this->db->get();
+        return $query->row_array();
+    }
+    
     function filas() {
         $consulta = $this->db->get('imagenes');
         return $consulta->num_rows();
