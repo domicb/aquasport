@@ -8,7 +8,11 @@ class Articulos_model extends CI_Model {
     
     //FUNCIÓN PARA DEVOLVER LOS DATOS DE LOS ARTICULOS
     public function get_articulos($por_pagina, $segmento) {
-        $query = $this->db->get('imagenes',$por_pagina, $segmento);    
+        $this->db->select('*');
+        $this->db->from('imagenes');
+        $this->db->limit($por_pagina,$segmento);
+        $this->db->order_by("fecha","desc");
+        $query = $this->db->get();    
         //$this->db->where('inicio', valor, 'fin',valor);    
         return $query->result_array();
     }
@@ -19,7 +23,6 @@ class Articulos_model extends CI_Model {
         $this->db->select('*');
         $this->db->from('imagenes');
         $this->db->where('id',$id);
-        $this->db->order_by("date", "asc");
         $query =  $this->db->get();
         return $query->row_array();
     }
