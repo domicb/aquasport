@@ -11,7 +11,7 @@
             <?php if ($articulo['enlace'] != ''): ?>
                 <iframe src="<?= $articulo['enlace'] ?>" width="560" height="315" frameborder="0" allowfullscreen ></iframe><br>
             <?php endif; ?><p>Si quieres saber más sobre este articulo puedes dejarnos un post en nuestro foro con tu consulta
-                <strong><a href="http://www.pesacng.info/foropesca/">Descubre el foro</a>
+                <strong><a href="http://www.pesacng.info/index.php/foropesca/">Descubre el foro</a>
                 </strong>www.pescacng.info/foropesca/</p>
             <p>
                 	<!-- Load Facebook SDK for JavaScript -->
