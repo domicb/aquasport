@@ -13,7 +13,7 @@
                                 <img class="slide-image" src="<?= base_url() ?>assets/ESLOGAN.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="slide-image" src="<?= base_url() ?>assets/4ancho.jpg" alt="">
+                                <img class="slide-image" src="<?= base_url() ?>assets/ESLOGAN2.jpg" alt="">
                             </div>
                             <div class="item">
                                 <img class="slide-image" src="<?= base_url() ?>assets/5ancho.jpg" alt="">
