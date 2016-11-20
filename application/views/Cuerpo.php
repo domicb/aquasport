@@ -10,7 +10,7 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img class="slide-image" src="<?= base_url() ?>assets/FOTO SLOGAN.jpg" alt="">
+                                <img class="slide-image" src="<?= base_url() ?>assets/ESLOGAN.jpg" alt="">
                             </div>
                             <div class="item">
                                 <img class="slide-image" src="<?= base_url() ?>assets/4ancho.jpg" alt="">
