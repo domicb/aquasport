@@ -60,9 +60,9 @@
     </div><br>
       <div class="form-group">
         <label><b>Introduce aquí la dirección de tu video : </b></label>
-      <input type="text" name="video" placeholder="opcional" value="<?php echo set_value('autor') ?>" /><br>
+      <input type="text" name="video" placeholder="opcional" value="<?php echo set_value('video') ?>" /><br>
       <label><b>Añade la descripción de la entrada, recuerda que no debería pasar de 200 carácteres.</b></label>
-      <textarea class="form-control" rows="5" cols="30" name="descripcion"></textarea>
+      <textarea class="form-control" rows="5" cols="30" name="descripcion" value="<?php echo set_value('descripcion') ?>"></textarea>
        </div>
  </div>
     <hr/>
@@ -124,7 +124,7 @@
     <input type="hidden" value="por defecto" id="esto" name="cuerpo"/>
 <!-- DIV CUERPO -->
     <div id="editor">
-      Empieza aquí tu entrada<?php echo set_value('cuerpo') ?>
+      Empieza aquí tu entrada
     </div>
     <label><b>Imagen principal:</b></label><input type="file" name="userfile" id="ejemplo_archivo_1" /><br /><br />
      <p class="help-block">La imagen seleccionada aparecerá como portada.</p>
