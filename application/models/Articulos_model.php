@@ -8,10 +8,8 @@ class Articulos_model extends CI_Model {
     
     //FUNCIÓN PARA DEVOLVER LOS DATOS DE LOS ARTICULOS
     public function get_articulos($por_pagina, $segmento) {
-        $query = $this->db->get('imagenes', 4, 0);
-        
-        //$this->db->where('inicio', valor, 'fin',valor);
-        
+        $query = $this->db->get('imagenes',$por_pagina, $segmento);    
+        //$this->db->where('inicio', valor, 'fin',valor);    
         return $query->result_array();
     }
     

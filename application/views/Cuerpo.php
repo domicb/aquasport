@@ -36,6 +36,7 @@
                 </div>
                 <div class="ratings">
                     <p>
+                        <?=$articulo['fecha']?>
                     <!-- AQUI PODRíAMOS AÑADIR UN BOTON DE FACEBOOK O TWTER
                     <p class="pull-right">15 reviews</p>-->
                 </div>

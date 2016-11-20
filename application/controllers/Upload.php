@@ -14,14 +14,17 @@ class Upload extends CI_Controller {
     function index() {
         //CARGAMOS LA VISTA DEL FORMULARIO
         $this->load->view('upload_view');
+        $this->load->helper('url');
+        $this->load->library('pagination'); //Cargamos la librería de paginación
     }
 
     //FUNCIÓN PARA SUBIR LA IMAGEN Y VALIDAR EL TÍTULO
     function do_upload($desde = 0) {
         $this->form_validation->set_rules('titulo', 'titulo', 'required|min_length[5]|max_length[50]|trim|xss_clean');
-        $this->form_validation->set_rules('cuerpo', 'cuerpo', 'required|min_length[35]|max_length[8000]');
+        $this->form_validation->set_rules('cuerpo', 'cuerpo', 'required|min_length[35]|max_length[40000]');
         $this->form_validation->set_rules('autor', 'autor', 'required|min_length[3]|max_length[50]|trim|xss_clean');
         $this->form_validation->set_rules('video', 'video', 'min_length[3]|max_length[190]');
+        $this->form_validation->set_rules('descripcion', 'descripcion', 'required|min_length[3]|max_length[190]');
         $this->form_validation->set_message('required', 'El %s no puede ir vacío!');
         $this->form_validation->set_message('min_length', 'El %s debe tener al menos %s carácteres');
         $this->form_validation->set_message('max_length', 'El %s no puede tener más de %s carácteres');
@@ -57,23 +60,9 @@ class Upload extends CI_Controller {
                 $data['titulo'] = $titulo;
                 $data['imagen'] = $imagen;
                 $data['cuerpo'] = $cuerpo;
-                // VARIABLES NECESARIAS PARA PAGINAR
-                // $this->load->helper('url');
-                $pages = 4; //Número de registros mostrados por páginas
-                $this->load->library('pagination'); //Cargamos la librería de paginación
-                // parametro base de la aplicación, si tenemos un .htaccess nos evitamos el index.php
-                $config['base_url'] = site_url('/index.php/Articulos');
-                $config['total_rows'] = $this->Articulos_model->filas(); //calcula el número de filas 
-                $config['per_page'] = $pages; //Número de registros mostrados por páginas
-                $config['num_links'] = 20; //Número de links mostrados en la paginación
-                $config['first_link'] = 'Primera'; //primer link
-                $config['last_link'] = 'Última'; //último link
-                $config["uri_segment"] = 3; //el segmento de la paginación
-                $config['next_link'] = 'Siguiente'; //siguiente link
-                $config['prev_link'] = 'Anterior'; //anterior link
-                $this->pagination->initialize($config); //inicializamos la paginación	
                 //recojemos los articulos y los mostramos
-                $this->load->view('imagen_subida_view',$data);
+                //$this->load->view('imagen_subida_view',$data);
+                redirect('/Articulos/','refresh');
             }
         } else {
             //SI EL FORMULARIO NO SE VÁLIDA LO MOSTRAMOS DE NUEVO CON LOS ERRORES
