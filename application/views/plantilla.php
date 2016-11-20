@@ -104,10 +104,12 @@
         <div class="col-md-3">
             <p class="lead"><a href="http://www.pescacng.info/foropesca">Ver contenido en el foro</a></p>
             <div class="list-group">
-                <a href="https://www.youtube.com/channel/UCCKepeCXkZ1l6S3UsLVN_xw" class="list-group-item">Videos y Tutoriales</a>
-                <a href="#" class="list-group-item">Articulos</a>
-                <a href="#" class="list-group-item">Noticias</a>
-                <a href="#" class="list-group-item">Recetas</a>
+                <a href="https://www.youtube.com/channel/UCCKepeCXkZ1l6S3UsLVN_xw" class="list-group-item"><h4 class="list-group-item-heading">Videos</h4>
+                    <p class="list-group-item-text">Descubre nuestro catálogo de vídeos y tutoriales</p></a>
+                    <a href="<?=base_url()?>index.php/Articulos" class="list-group-item"><h4 class="list-group-item-heading">Articulos</h4>
+                    <p class="list-group-item-text">Consulta los artículos y noticias </p></a>
+                <a href="https://www.google.es/imgres?imgurl=http%3A%2F%2Fdde.ieepo.oaxaca.gob.mx%2Fwp-content%2Fuploads%2F2016%2F01%2FWeb-en-Construccion.png&imgrefurl=http%3A%2F%2Fdde.ieepo.oaxaca.gob.mx%2F%3Fattachment_id%3D377&docid=-rVJdu3z2XeGRM&tbnid=FdrJcXQMah_DuM%3A&vet=1&w=1280&h=800&bih=708&biw=1517&ved=0ahUKEwj64fiLjrbQAhVJvBoKHUGGCwIQMwg3KAAwAA&iact=mrc&uact=8" class="list-group-item">
+                    <h4 class="list-group-item-heading">Recetas</h4><p class="list-group-item list-group-item-danger">En construcción </p></a>
             </div>
         </div>
         <span id="aqui">

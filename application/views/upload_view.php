@@ -58,7 +58,12 @@
                             <option value='deportes'>Recetas</option>
         </select>
     </div><br>
-    <textarea class="form-control" rows="5" cols="30" name="descripcion"></textarea><label><b>Añade la descripción de la entrada, recuerda que no debería pasar de 200 carácteres.</b></label>
+      <div class="form-group">
+        <label><b>Introduce aquí la dirección de tu video : </b></label>
+      <input type="text" name="video" placeholder="opcional" value="<?php echo set_value('autor') ?>" /><br>
+      <label><b>Añade la descripción de la entrada, recuerda que no debería pasar de 200 carácteres.</b></label>
+      <textarea class="form-control" rows="5" cols="30" name="descripcion"></textarea>
+       </div>
  </div>
     <hr/>
     <small><h3>Introduce aquí el cuerpo del articulo<h3></small>

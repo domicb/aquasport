@@ -39,9 +39,7 @@
                     <p><?= substr($articulo['descripcion'], 0, 500) ?></p>
                 </div>
                 <div class="ratings">
-                    <p><?php if ($articulo['enlace'] != ''): ?>
-                            <a href="<?= $articulo['enlace'] ?>"target="_blank">Sigue leyendo... </a></p>
-                        <?php endif; ?>
+                    <p>
                     <!-- AQUI PODRíAMOS AÑADIR UN BOTON DE FACEBOOK O TWTER
                     <p class="pull-right">15 reviews</p>-->
                 </div>

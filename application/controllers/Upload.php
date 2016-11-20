@@ -21,6 +21,7 @@ class Upload extends CI_Controller {
         $this->form_validation->set_rules('titulo', 'titulo', 'required|min_length[5]|max_length[50]|trim|xss_clean');
         $this->form_validation->set_rules('cuerpo', 'cuerpo', 'required|min_length[35]|max_length[8000]');
         $this->form_validation->set_rules('autor', 'autor', 'required|min_length[3]|max_length[50]|trim|xss_clean');
+        $this->form_validation->set_rules('video', 'video', 'required|min_length[3]|max_length[190]');
         $this->form_validation->set_message('required', 'El %s no puede ir vacío!');
         $this->form_validation->set_message('min_length', 'El %s debe tener al menos %s carácteres');
         $this->form_validation->set_message('max_length', 'El %s no puede tener más de %s carácteres');
@@ -49,10 +50,10 @@ class Upload extends CI_Controller {
                 $cuerpo = $this->input->post('cuerpo');
                 $autor = $this->input->post('autor');
                 $categoria = $this->input->post('categoria');
-                $enlace = $this->input->post('enlace');
+                $enlace = $this->input->post('video');
                 $imagen = $file_info['file_name'];
-                $descripcion = $this->input->post('descripcion');
-                $this->Upload_model->subir($titulo, $imagen, $autor, $cuerpo, $categoria, $enlace,$descripcion);
+                $descripcion = $this->input->post('descripcion');          
+                $this->Upload_model->subir($titulo, $imagen, $autor, $cuerpo, $categoria, $enlace,$descripcion,$enlace);
                 $data['titulo'] = $titulo;
                 $data['imagen'] = $imagen;
                 $data['cuerpo'] = $cuerpo;

@@ -30,4 +30,9 @@ class Articulos extends CI_Controller {
              $cuerpo = $this->load->view('Cuerpo',Array('articulos'=> $articulos),true);
             $this->load->view('plantilla',Array('cuerpo'=>$cuerpo));
 	}
+        
+        public function proximo()
+        {
+            $this->load->view('recetas');
+        }
 }
