@@ -20,6 +20,7 @@ class landing extends CI_Controller {
 	 */
 	public function index()
 	{
+		//$this -> output->cache(10);
              $this->load->helper('url');
 		$this->load->view('index.html');
 	}
