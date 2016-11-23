@@ -3,13 +3,15 @@
 
     <div class="thumbnail">
         <img class="img-responsive" src="<?= base_url() ?>uploads/<?= $articulo['ruta'] ?>" alt="">
+      </div>
+      <div class="col-md-12">
         <div class="caption-full">
             <h4 class="pull-right"><?= $articulo['autor'] ?>&COPY;</h4>
             <h4><a href="#"><?= $articulo['titulo'] ?></a>
             </h4> 
             <p><?= $articulo['cuerpo'] ?></p>
             <?php if ($articulo['enlace'] != ''): ?>
-                <iframe src="<?= $articulo['enlace'] ?>" width="560" height="315" frameborder="0" allowfullscreen ></iframe><br>
+               <?= $articulo['enlace'] ?><br>
             <?php endif; ?><p>Si quieres saber más sobre este articulo puedes dejarnos un post en nuestro foro con tu consulta
                 <strong><a href="http://www.pesacng.info/index.php/foropesca/">Descubre el foro</a>
                 </strong>www.pescacng.info/foropesca/</p>
