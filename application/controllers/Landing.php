@@ -24,4 +24,11 @@ class landing extends CI_Controller {
              $this->load->helper('url');
 		$this->load->view('index.html');
 	}
+	public function previ()
+	{
+            $lugar = $_POST['local'];
+            $this->load->model('Articulos_model');
+            $salida = $this->Articulos_model->tiempo($lugar);
+            echo json_encode($salida);
+	}	
 }

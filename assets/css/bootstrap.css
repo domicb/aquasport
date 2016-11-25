@@ -240,6 +240,7 @@ th {
   }
   .navbar {
     display: none;
+    grid-float-breakpoint:400px;
   }
   .btn > .caret,
   .dropup > .btn > .caret {

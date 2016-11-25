@@ -1,0 +1,20 @@
+
+            .titulo{
+                color:#012DFF;
+                line-height: 1.2;}
+            #titulo{
+                color:#1F618D;
+                font-style:"century ghotic";}
+            .p{
+                color:#0066E8;}
+            .ari{
+                font-family: verdana, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                font-color:#FFFFFF;}
+            #cris{
+                background-color:#1F618D;
+                font-size:18px ;}
+
+            html, body, #map_canvas {                
+                height: 100%;}

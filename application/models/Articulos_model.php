@@ -27,8 +27,16 @@ class Articulos_model extends CI_Model {
         return $query->row_array();
     }
     
-    function filas() {
+    public function filas() {
         $consulta = $this->db->get('imagenes');
         return $consulta->num_rows();
+    }
+
+    public function tiempo($lugar){
+        $this->db->select('enlace');
+        $this->db->from('enlace');
+        $this->db->like('sitio',$lugar);
+        $query = $this->db->get();
+        return $query->result_array();
     }
 }
