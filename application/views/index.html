@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({
                 google_ad_client: "ca-pub-3495975343321117",
@@ -16,39 +15,28 @@
           ga('create', 'UA-86909092-1', 'auto');
           ga('send', 'pageview');
         </script>
-                <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap.min.css" type="text/css">
         <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="<?=base_url()?>assets/js/bootstrap.min.js" ></script>
         <meta charset="UTF-8">
         <meta name="google-site-verification" content="OKS3ePznYyZwJKyQB0r5QUcsjDdS5b73rd0zCsQob-4" />
         <link rel="shortcut icon" tipe="img/x-icon" href="<?=base_url()?>assets/pesca.png" />
         <title> La pesca | pescacng.info  </title>
-        <meta name="description" content="Articulos sobre la pesca, foro pesca, pesca online, como pescar, la pesca">
+        <meta name="description" content="Articulos sobre pesca, foro pesca, pescado, como pescar">
         <!-- NOS HEMOS DECANTADO POR UTILIZAR EL CDN DE BOOSTRAP -->
-        <style type="text/css">
-            .titulo{
-                color:#012DFF;
-                line-height: 1.2;}
-            #titulo{
-                color:#1F618D;
-                font-style:"century ghotic";}
-            .p{
-                color:#0066E8;}
-            .ari{
-                font-family: verdana, sans-serif;
-                font-size: 14px;
-                font-weight: bold;
-                font-color:#FFFFFF;}
-            #cris{
-                background-color:#1F618D;
-                font-size:18px ;}
-
-            html, body, #map_canvas {                
-                height: 100%;}
-            </style>
+        <link href="<?=base_url()?>assets/css/stilo.css" rel="stylesheet" type="text/css">
         </head>
         <body>
+        <script>(function (d, s, id) { 
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8&appId=1827996470779055";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
             <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
             <nav class="navbar navbar-inverse navbar-fixed-top" id="cris" role="navigation">
             <div class="container">
@@ -113,6 +101,10 @@
                     var posi = $("#eltiempo").offset().top;
                     $("html, body").animate({scrollTop: posi});
                 });
+                $(".tiem").click(function () {
+                    var posi = $("#eltiempo").offset().top;
+                    $("html, body").animate({scrollTop: posi});
+                });
                 $("#btnabout").click(function () {
                     var posi = $("#about").offset().top;
                     $("html, body").animate({scrollTop: posi});
@@ -169,16 +161,14 @@
                 <!-- SEGUNDO ELEMENTO -->
                 <div class="col-md-3 col-sm-6 col-xs-12 hero-feature">
                     <div class="thumbnail">
-                        <span class="help-block" id="titulo"><p class="text-primary"><b>EL TIEMPO</b></p></span>
-                        <img  class="img-rounded"  src="<?=base_url()?>assets/tiempo.jpg" class="img-responsive" alt="">
+                        <span class="help-block" id="titulo"><p class="text-primary"><b class="tiem">EL TIEMPO</b></p></span>
+                        <img  class="img-rounded"  src="<?=base_url()?>assets/tiempo.jpg" class="tiem" class="img-responsive" alt="">
                         <div class="caption">
-                            <h3 class="titulo"> No olvides mirarlo </h3>
-                            <p class="p">Aquí encontraras todo la información meteorología que necesites. No olvides que para practicar tu deporte favorito, debe haber un clima adecuado, por ello no olvides mirar el tiempo antes de salir. Podrás clasificar tu búsqueda como prefieras, por comunidades, por ciudades...<p>
-                            <p> <a href="http://www.tablademareas.com/es" target="_blank" class="btn btn-primary">Más información  </a></p>
+                            <h3 class="titulo" class="tiem"> No olvides mirarlo </h3>
+                            <p class="p" >Aquí encontraras todo la información meteorología que necesites. No olvides que para practicar tu deporte favorito, debe haber un clima adecuado, por ello no olvides mirar el tiempo antes de salir. Podrás clasificar tu búsqueda como prefieras, por comunidades, por ciudades...<p>
                         </div>
                     </div>
                 </div>
-            
                 <!-- TERCER ELEMENTO -->
                <div class="col-md-3 col-sm-6 col-xs-12 hero-feature">
                     <div class="thumbnail">
@@ -192,8 +182,7 @@
                         </div>
                     </div>
                </div> 
-                <!-- CUARTO ELEMENTO -->
-                
+                <!-- CUARTO ELEMENTO -->         
                  <div class="col-md-3 col-sm-6 col-xs-12 hero-feature">
                   <a class="twitter-timeline" data-width="300" data-height="600" data-link-color="#2B7BB9" href="https://twitter.com/aquasportinfo">Tweets by aquasportinfo</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>  
                 </div>
@@ -205,7 +194,7 @@
                 <blockquote class="pull-right">
                     <p class="titulo" id="galeria">Ultimas fotos.</p>
                     <small>Nosotros nos llevamos una imagen <cite title="y">tu la experiencia.
-                            <br> No olvides mandarnos tus fotos para poder compartirlas con los demás</cite></small>
+                            <br> comparte con todos tu pesca, para ello puedes compartir tu foto en <a href="https://www.facebook.com/aquasportinfo/" target"_blank">nuestro facebook</a></cite></small>
                 </blockquote>
             </div>    
             <!-- row galeria -->
@@ -315,19 +304,36 @@
             <hr>
             <blockquote class="pull-right">
                 <p class="titulo" id="carrusel">¿Te gusta lo que ves?.</p>
-                <small>Si necesitas más información especifica pincha aquí: <a  href="http://www.tablademareas.com/es" target="_blank"><u><big>ELTIEMPO</big></u></a>.</cite></small>
+                <small><cite class="tiem">Ayúdanos a darte la previsión </cite><!-- Your like button code --></small>
             </blockquote>
+            <div class="fb-like" 
+                data-href="<?= base_url() ?>?>index.php/Landing" 
+                data-layout="standard" 
+                data-action="like" 
+                data-show-faces="true">
+            </div>
+            <br>
             <!-- ELTIEMPO -->
             <br>
             <hr>
-            <div class="row"><center>
-                <!-- EL TIEMPO WIND --><p class="text-primary">La previsión según Windytv.</p>
-                <div class="col-md-8"><iframe src="https://embed.windytv.com/?39.876,-3.164,6,menu,message,marker" width="750" height="500" frameborder="0"></iframe></div></center> 
+            <div class="row">
+                <center>   
+                   <!-- EL TIEMPO WIND --><p class="text-primary">La previsión según Windytv.</p>         
+                <div class="col-md-8"><iframe src="https://embed.windytv.com/?39.927,-4.680,6,menu,message,marker" width="750" height="500" frameborder="0"></iframe></div></center> 
                 <div class="col-md-4"><p class="text-primary">Windytv nos proporciona información metorologica del mundo entero, pero no por ello es menos concreto pues podemos navegar justo al lugar de nuestro pesquero y comprovar la previsión para las proximas horas.<br> Los colores amarillos, naranjas y rojos nos ubican las zonas donde el viento sopla con más intensidad. Tambien podemos consultar otros valores cómo temperatura, nubes, olas o presión.</p>
                     <img src="<?=base_url()?>assets/mundo.png" class="img-responsive" alt="El mundo a través de windytv"><p class="text-primary"> Windytv se actualiza 4 veces al día y por si fuera poco podemos consultar los mejores accesos a nuestro pesquero pues también se ve el mapa de carreteras.</p></div>       
             </div>
-            <div class="row"><center><p class="text-primary">La previsión según Windguru.</p>            <!-- EL TIEMPO WINDGURU -->
-                <div class="col-md-8"> <iframe src="https://www.windguru.cz/int/distr_iframe.php?u=1169662&s=48748&c=533e531c1a" frameborder="0" width="800" height="380"></iframe></div> </center>         
+            <div class="row">
+                <center><p class="text-primary">La previsión según Windguru.</p>            <!-- EL TIEMPO WINDGURU -->
+                  <div class="form-group">
+                      <div class="form-group">
+                            <label class="sr-only"></label>
+                            <input type="email" class="form-control" id="local" name="local"
+                                   placeholder="Introduce tu localidad">
+                          </div>
+                      </div>
+                  <button type="submit" class="btn btn-default" name="previ" id="previ">Previsión</button>
+                <div class="col-md-8"> <iframe id="guru" src="https://www.windguru.cz/int/distr_iframe.php?u=1169662&s=48748&c=533e531c1a" frameborder="0" width="800" height="380"></iframe></div> </center>         
             </div>
             <!-- FIN ELTIEMPO -->
             <br><br><br><br><br><br>
@@ -344,11 +350,6 @@
                 <!-- MI ESLOGAN -->
                 <h1 id="titulo">Nuestro equipo</h1>
                 <p class="p">Somos un grupo de aficionados a la pesca que hemos creado este espacio con la intención de compartir y darle difusión a nuestros conocimientos, así como, adquirir nuevos conocimientos gracias a esta comunidad. Tendrás la oportunidad de planear con eficiencia tu jornada de pesca, basándote en las experiencias compartidas por nuestros usuarios, así como, obtener información a tiempo real sobre el tiempo y otros valores climatológicos que afectan a la jornada de pesca. </p>               
-                <address><center>
-                        <strong>AquaSport S.L.</strong><br>
-                        Avenida Principal 123<br>
-                        Punta Umbría, Huelva 21100<br>
-                    </center></address>
                 <address><center>
                         <strong>E-mail</strong><br>
                         <a href="mailto:#">aquasport.inform@gmail.com</a>
@@ -371,7 +372,7 @@
             <h1 id="titulo">Estamos en</h1>
             <p class="p">Nuestra responsabilidad social corporativa se basa en el compromiso con la sociedad y por eso queremos estar cerca de ella. Para ponerte en contacto con nosotros puedes seguirnos en: </p>  <br>
 
-            <a href="https://www.facebook.com/profile.php?id=100013947528486" target="_blank"><img alt="siguenos en facebook" height="48" class="img-circle" src="http://4.bp.blogspot.com/-LnKbkk802kw/UiXwV9rN8xI/AAAAAAAAB0Y/fQCQKFEbvjM/s1600/face.png" title="siguenos en facebook" width="48" /></a>&nbsp;&nbsp;
+            <a href="https://www.facebook.com/aquasportinfo/" target="_blank"><img alt="siguenos en facebook" height="48" class="img-circle" src="http://4.bp.blogspot.com/-LnKbkk802kw/UiXwV9rN8xI/AAAAAAAAB0Y/fQCQKFEbvjM/s1600/face.png" title="siguenos en facebook" width="48" /></a>&nbsp;&nbsp;
             <a href="https://plus.google.com/u/1/106036487165336820763" target="_blank"><img alt="siguenos en Google+" height="48" class="img-circle" src="http://3.bp.blogspot.com/-IwxItZ1_cM0/UiX0-g2DrCI/AAAAAAAAB1c/hOSA6Uklo-I/s1600/Google%252B+alt.png" title="siguenos en Google+" width="48" /></a>
             <br><br>
             <a href="https://twitter.com/aquasportinfo" target="_blank"><img alt="siguenos en Twitter" height="48" class="img-circle" src="http://2.bp.blogspot.com/-CaF1EOBAWj4/UiX1AxmkZuI/AAAAAAAAB2Y/IioIplosXNo/s1600/Twitter+NEW.png" title="siguenos en Twitter" width="48" /></a>&nbsp;&nbsp;
@@ -390,6 +391,20 @@
     });
     $("#btnlogo").click(function () {
         $('body,html').animate({scrollTop: 0}, 500);
+    });
+    $("#previ").click(function()
+    {
+        var lugar = $("#local").val();
+        $.post('<?=base_url("index.php/Landing/previ/")?>',{local:lugar},function(data)
+        {
+            var json = JSON.parse(data);
+            //console.log(data);
+            //console.log('el valor del input es:',lugar);
+            for(post in json)
+            {
+                $("#guru").attr("src",json[post].enlace);
+            }
+        });
     });
 </script>
 </div><!-- FIN DEL CONTENDOR PRINCIPAL DE LA WEB -->   
