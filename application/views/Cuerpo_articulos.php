@@ -13,7 +13,7 @@
             <?php if ($articulo['enlace'] != ''): ?>
                <?= $articulo['enlace'] ?><br>
             <?php endif; ?><p>Si quieres saber más sobre este articulo puedes dejarnos un post en nuestro foro con tu consulta
-                <strong><a href="http://www.pesacng.info/index.php/foropesca/">Descubre el foro</a>
+                <strong><a href="https://www.pescacng.info/foropesca/">Descubre el foro</a>
                 </strong>www.pescacng.info/foropesca/</p>
             <p>
                 	<!-- Load Facebook SDK for JavaScript -->

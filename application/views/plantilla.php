@@ -18,7 +18,7 @@
         <meta charset="UTF-8">
         <link rel="shortcut icon" tipe="img/x-icon" href="<?= base_url() ?>assets/pesca.png" />
         <title>  Articulos pesca | pescacng.info </title>
-        <meta name="description" content="Foro pesca, pesca online, como pescar">
+        <meta name="description" content="Foro pesca, pesca, articulos de pesca">
         <!-- NOS HEMOS DECANTADO POR UTILIZAR EL CDN DE BOOSTRAP -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>

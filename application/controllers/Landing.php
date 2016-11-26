@@ -15,14 +15,14 @@ class landing extends CI_Controller {
         $this->load->model('Articulos_model');
         $salida = $this->Articulos_model->tiempo($lugar);
         echo json_encode($salida);
-        }
+    }
 
-        public function aemet() {
+    public function aemet() {
 
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://opendata.aemet.es/opendata/api/prediccion/maritima/costera/costa/41?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcXVhc3BvcnQuaW5mb3JtQGdtYWlsLmNvbSIsImp0aSI6ImEyNmEwM2ZkLTc3YmUtNGFkMS1iYThkLThjYTIzODRlMjE1MyIsImV4cCI6MTQ4Nzg0OTU0NCwiaXNzIjoiQUVNRVQiLCJpYXQiOjE0ODAwNzM1NDQsInVzZXJJZCI6ImEyNmEwM2ZkLTc3YmUtNGFkMS1iYThkLThjYTIzODRlMjE1MyIsInJvbGUiOiIifQ.HummA5axxrVmaqJJc-0NGDQlCZFI69J-8FBlDP1dftE",
+            CURLOPT_URL => "https://opendata.aemet.es/opendata/api/red/radar/nacional/?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcXVhc3BvcnQuaW5mb3JtQGdtYWlsLmNvbSIsImp0aSI6ImEyNmEwM2ZkLTc3YmUtNGFkMS1iYThkLThjYTIzODRlMjE1MyIsImV4cCI6MTQ4Nzg0OTU0NCwiaXNzIjoiQUVNRVQiLCJpYXQiOjE0ODAwNzM1NDQsInVzZXJJZCI6ImEyNmEwM2ZkLTc3YmUtNGFkMS1iYThkLThjYTIzODRlMjE1MyIsInJvbGUiOiIifQ.HummA5axxrVmaqJJc-0NGDQlCZFI69J-8FBlDP1dftE",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "UTF-8",
             CURLOPT_SSL_VERIFYPEER =>"false",
@@ -43,9 +43,7 @@ class landing extends CI_Controller {
         if ($err) {
             echo "cURL Error #:" . $err;
         } else {
-            json_decode($response);
-            $cuerpo = json_decode($response);
-            $this->load->view('plantilla',$cuerpo);
+            echo $response;
         }
     }
 }

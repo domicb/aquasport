@@ -35,8 +35,8 @@
                     <p><?= substr($articulo['descripcion'], 0, 500) ?></p>
                 </div>
                 <div class="ratings">
-                    <p>
-                        <?=$articulo['fecha']?>
+                    <p><small>Escrito en 
+                        <?=$articulo['fecha']?></small></p>
                     <!-- AQUI PODRíAMOS AÑADIR UN BOTON DE FACEBOOK O TWTER
                     <p class="pull-right">15 reviews</p>-->
                 </div>
