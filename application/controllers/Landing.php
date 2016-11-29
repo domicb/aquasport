@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class landing extends CI_Controller {
 
     public function index() {
-        //$this -> output->cache(10);
+        $this->output->cache(1);
         $this->load->helper('url');
         $this->load->view('index.html');
     }
@@ -22,10 +22,10 @@ class landing extends CI_Controller {
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://opendata.aemet.es/opendata/api/red/radar/nacional/?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcXVhc3BvcnQuaW5mb3JtQGdtYWlsLmNvbSIsImp0aSI6ImEyNmEwM2ZkLTc3YmUtNGFkMS1iYThkLThjYTIzODRlMjE1MyIsImV4cCI6MTQ4Nzg0OTU0NCwiaXNzIjoiQUVNRVQiLCJpYXQiOjE0ODAwNzM1NDQsInVzZXJJZCI6ImEyNmEwM2ZkLTc3YmUtNGFkMS1iYThkLThjYTIzODRlMjE1MyIsInJvbGUiOiIifQ.HummA5axxrVmaqJJc-0NGDQlCZFI69J-8FBlDP1dftE",
+            CURLOPT_URL => "https://opendata.aemet.es/opendata/api/observacion/convencional/datos/estacion/4642E/?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcXVhc3BvcnQuaW5mb3JtQGdtYWlsLmNvbSIsImp0aSI6ImEyNmEwM2ZkLTc3YmUtNGFkMS1iYThkLThjYTIzODRlMjE1MyIsImV4cCI6MTQ4Nzg0OTU0NCwiaXNzIjoiQUVNRVQiLCJpYXQiOjE0ODAwNzM1NDQsInVzZXJJZCI6ImEyNmEwM2ZkLTc3YmUtNGFkMS1iYThkLThjYTIzODRlMjE1MyIsInJvbGUiOiIifQ.HummA5axxrVmaqJJc-0NGDQlCZFI69J-8FBlDP1dftE",
             CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "UTF-8",
-            CURLOPT_SSL_VERIFYPEER =>"false",
+            CURLOPT_ENCODING => "",
+            CURLOPT_SSL_VERIFYPEER => "false",
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
@@ -45,6 +45,12 @@ class landing extends CI_Controller {
         } else {
             echo $response;
         }
+
+        /* $response = curl_exec($ch);
+          $json = json_decode($response, true);
+          curl_close($ch);
+          print_r($json);
+          $userEmail = $json["email"]; */
     }
+
 }
-    

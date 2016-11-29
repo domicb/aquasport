@@ -22,7 +22,7 @@
             ga('create', 'UA-86909092-1', 'auto');
             ga('send', 'pageview');
         </script>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script type="text/javascript" src="<?=base_url()?>assets/js/jquery-3.1.1.min.js"></script>
         <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap.min.css" type="text/css">
         <!-- Latest compiled and minified JavaScript -->
         <script type="text/javascript" src="<?=base_url()?>assets/js/bootstrap.min.js" ></script>
@@ -44,6 +44,23 @@
                 js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8&appId=1827996470779055";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
+            <!-- dato estructurado -->
+            <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Event",
+  "name": "Certamen de pesca",
+  "startDate" : "2016-12-06T09:30",
+  "url" : "http://www.pescacng.info/foropesca/viewtopic.php?f=9&t=17",
+  "description": "26 certamen de pesca del club la baila en fuengirola",
+  "location" : {
+    "@type" : "Place",
+    "sameAs" : "http://www.pescacng.info",
+    "name" : "Foro de pesca",
+    "address" : "Club de pesca la baila fuengirola"
+  }
+}
+</script>
         <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
         <nav class="navbar navbar-inverse navbar-fixed-top" id="cris" role="navigation">
             <div class="container">
@@ -288,8 +305,8 @@
                             <h3 class="panel-title">Ría de Punta Umbría</h3>
                         </div>
                         <div class="panel-body">
-                            <a href="<?=base_url()?>assets/domi pesca 2.jpeg"><img src="<?=base_url()?>assets/domi pesca 2.jpeg" class="img-responsive" ></a>
-                            <p class="text-info"> Foto de nuestro amigo Domingo este sábado (5/11/16)</p>
+                            <a href="<?=base_url()?>assets/domi pesca 2.jpeg"><img src="<?=base_url()?>assets/tanero.jpg" class="img-responsive" ></a>
+                            <p class="text-info"> Foto de nuestro amigo Walter este Sábado (27/11/16)</p>
                         </div>
                     </div>
                 </div>
