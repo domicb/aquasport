@@ -109,6 +109,7 @@
         <!-- AQUI TERMINA EL MENU SUPERIOR DE NAVEGACION -->
         <script type="text/javascript">
             $(document).ready(function () {
+                $("#temp").toggle();
                 $("#top").click(function () {
                     var posicion = $("#aqui").offset().top;
                     $("html, body").animate({scrollTop: posicion});
@@ -343,7 +344,8 @@
             <div class="row">
                 <center>   
                     <!-- EL TIEMPO WIND --><p class="text-primary">La previsión según Windytv.</p>         
-                    <div class="col-md-8"><iframe src="https://embed.windytv.com/?39.927,-4.680,6,menu,message,marker" width="750" height="500" frameborder="0"></iframe></div></center> 
+                    <div class="col-md-8"><iframe src="https://embed.windytv.com/?37.200,-7.317,6,menu,message,marker,ip" width="750" height="500" frameborder="0"></iframe>
+        </iframe></div></center> 
                 <div class="col-md-4"><p class="text-primary">Windytv nos proporciona información metorologica del mundo entero, pero no por ello es menos concreto pues podemos navegar justo al lugar de nuestro pesquero y comprovar la previsión para las proximas horas.<br> Los colores amarillos, naranjas y rojos nos ubican las zonas donde el viento sopla con más intensidad. Tambien podemos consultar otros valores cómo temperatura, nubes, olas o presión.</p>
                     <img src="<?=base_url()?>assets/mundo.png" class="img-responsive" alt="El mundo a través de windytv"><p class="text-primary"> Windytv se actualiza 4 veces al día y por si fuera poco podemos consultar los mejores accesos a nuestro pesquero pues también se ve el mapa de carreteras.</p></div>       
             </div>
@@ -359,15 +361,21 @@
                             </select>
                             <label class="sr-only"></label>
                             <input type="email" class="form-control" id="local" name="local"
-                                   placeholder="Introduce la localidad">   
+                                   placeholder="Introduce la localidad">
                         </div>
                     </div>   <br>                 
-                    <div class="col-md-8"> <iframe id="guru" src="https://www.windguru.cz/int/distr_iframe.php?u=1169662&s=48748&c=533e531c1a" frameborder="0" width="800" height="380"></iframe></div> </center>  
+                    <div class="col-md-8"> <iframe id="guru" src="https://www.windguru.cz/int/distr_iframe.php?u=1169662&s=48748&c=533e531c1a" frameborder="0" width="800" height="380"></iframe></div></center>  
                 <div class="col-md-4"><p class="text-primary">    
                         Selecciona la zona de costa y posteriormente introduce la localidad, el cuadro de la izquierda cambiará con la previsión del sitio seleccionado.</p><br>
                     <center><button type="submit" class="btn btn-info" name="previ" id="previ">Previsión</button> </center><br>
                    <p class="text-primary">  Si tu sitio no aparece, puedes mandarnos la dirección del lugar y lo añadiremos en menos de 24h.</p>
                 </div></div> 
+        <div class="row">
+            <center><button type="submit" class="btn btn-info" name="previ" id="temp2">Temperatura del agua según aemet</button></center><br>
+                <div class"col-md-12" id="temp">
+                     <img style="-webkit-user-select: none" src="https://opendata.aemet.es/opendata/api/satelites/producto/sst/?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcXVhc3BvcnQuaW5mb3JtQGdtYWlsLmNvbSIsImp0aSI6ImEyNmEwM2ZkLTc3YmUtNGFkMS1iYThkLThjYTIzODRlMjE1MyIsImV4cCI6MTQ4Nzg0OTU0NCwiaXNzIjoiQUVNRVQiLCJpYXQiOjE0ODAwNzM1NDQsInVzZXJJZCI6ImEyNmEwM2ZkLTc3YmUtNGFkMS1iYThkLThjYTIzODRlMjE1MyIsInJvbGUiOiIifQ.HummA5axxrVmaqJJc-0NGDQlCZFI69J-8FBlDP1dftE">
+                </div>
+        </div>
         <!-- FIN ELTIEMPO -->
         <br><br>
         <hr>          
@@ -424,6 +432,12 @@
                 });
                 $("#btnlogo").click(function () {
                     $('body,html').animate({scrollTop: 0}, 500);
+                });
+                $("#temp2").mouseenter(function(){
+                    $("#temp").show();
+                });
+                $("#temp2").mouseleave(function(){
+                    $("#temp").hide();
                 });
                 $("#previ").click(function ()
                 {
