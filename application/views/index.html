@@ -343,14 +343,15 @@
             <hr>
             <div class="row">
                 <center>   
-                    <!-- EL TIEMPO WIND --><p class="text-primary">La previsión según Windytv.</p>         
+                    <!-- EL TIEMPO WIND --><p class="text-primary"><b>La previsión según Windytv.</b></p>         
                     <div class="col-md-8"><iframe src="https://embed.windytv.com/?37.200,-7.317,6,menu,message,marker,ip" width="750" height="500" frameborder="0"></iframe>
         </iframe></div></center> 
                 <div class="col-md-4"><p class="text-primary">Windytv nos proporciona información metorologica del mundo entero, pero no por ello es menos concreto pues podemos navegar justo al lugar de nuestro pesquero y comprovar la previsión para las proximas horas.<br> Los colores amarillos, naranjas y rojos nos ubican las zonas donde el viento sopla con más intensidad. Tambien podemos consultar otros valores cómo temperatura, nubes, olas o presión.</p>
                     <img src="<?=base_url()?>assets/mundo.png" class="img-responsive" alt="El mundo a través de windytv"><p class="text-primary"> Windytv se actualiza 4 veces al día y por si fuera poco podemos consultar los mejores accesos a nuestro pesquero pues también se ve el mapa de carreteras.</p></div>       
             </div>
             <div class="row">
-                <center><p class="text-primary">La previsión según Windguru.</p>      <!-- EL TIEMPO WINDGURU -->
+                <div class="col-md-8">
+                <center><p class="text-primary"><b>La previsión según Windguru.</b></p>
                     <div class="form-inline">
                         <div class="form-group">
                             <label>Selecciona la zona de pesca : </label>
@@ -364,7 +365,7 @@
                                    placeholder="Introduce la localidad">
                         </div>
                     </div>   <br>                 
-                    <div class="col-md-8"> <iframe id="guru" src="https://www.windguru.cz/int/distr_iframe.php?u=1169662&s=48748&c=533e531c1a" frameborder="0" width="800" height="380"></iframe></div></center>  
+                     <iframe id="guru" src="https://www.windguru.cz/int/distr_iframe.php?u=1169662&s=48748&c=533e531c1a" frameborder="0" width="800" height="380"></iframe></div></center>  
                 <div class="col-md-4"><p class="text-primary">    
                         Selecciona la zona de costa y posteriormente introduce la localidad, el cuadro de la izquierda cambiará con la previsión del sitio seleccionado.</p><br>
                     <center><button type="submit" class="btn btn-info" name="previ" id="previ">Previsión</button> </center><br>
