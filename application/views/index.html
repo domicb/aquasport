@@ -23,14 +23,16 @@
             ga('send', 'pageview');
         </script>
         <script type="text/javascript" src="<?=base_url()?>assets/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="<?=base_url()?>assets/js/funciones.js"></script>
         <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap.min.css" type="text/css">
         <!-- Latest compiled and minified JavaScript -->
         <script type="text/javascript" src="<?=base_url()?>assets/js/bootstrap.min.js" ></script>
         <meta charset="UTF-8">
         <meta name="google-site-verification" content="OKS3ePznYyZwJKyQB0r5QUcsjDdS5b73rd0zCsQob-4" />
         <link rel="shortcut icon" tipe="img/x-icon" href="<?=base_url()?>assets/pesca.png" />
-        <title> La pesca | pescacng.info  </title>
+        <title> La pesca deportiva | pescacng.info  </title>
         <meta name="description" content="Articulos sobre la pesca, foro sobre pesca deportiva, pescado, como pescar">
+        <meta content="pesca, kayak, lubina, robalo, spinning, jigging, surfcasting, el tiempo, mareas " name="keywords">
         <!-- NOS HEMOS DECANTADO POR UTILIZAR EL CDN DE BOOSTRAP -->
         <link href="<?=base_url()?>assets/css/stilo.css" rel="stylesheet" type="text/css">
     </head>
@@ -107,39 +109,6 @@
             <!-- /.container -->
         </nav>
         <!-- AQUI TERMINA EL MENU SUPERIOR DE NAVEGACION -->
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $("#temp").toggle();
-                $("#top").click(function () {
-                    var posicion = $("#aqui").offset().top;
-                    $("html, body").animate({scrollTop: posicion});
-                });
-                $("#btngaleria").click(function () {
-                    var pos = $("#galeria").offset().top;
-                    $("html, body").animate({scrollTop: pos});
-                });
-                $("#btnsecciones").click(function () {
-                    var posi = $("#secciones").offset().top;
-                    $("html, body").animate({scrollTop: posi});
-                });
-                $("#btneltiempo").click(function () {
-                    var posi = $("#eltiempo").offset().top;
-                    $("html, body").animate({scrollTop: posi});
-                });
-                $(".tiem").click(function () {
-                    var posi = $("#eltiempo").offset().top;
-                    $("html, body").animate({scrollTop: posi});
-                });
-                $("#btnabout").click(function () {
-                    var posi = $("#about").offset().top;
-                    $("html, body").animate({scrollTop: posi});
-                });
-                $("#btnsabermas").click(function () {
-                    var posi = $("#sabermas").offset().top;
-                    $("html, body").animate({scrollTop: posi});
-                });
-            });
-        </script>
         <!-- ABRIMOS UN HEADER PARA UTILIZARLO COMO PRESENTACION DE NUESTRA PAGINA ES DECIR UNA CABEZERA -->
         <hr>
         <div id="aqui"></div> <!-- IDENTIFICADOR PARA SUBIR ARRIVA  -->
@@ -427,20 +396,8 @@
     <center> <p><a class="btn btn-primary btn-large" id="subir">Volver arriba!</a><br>
             Copyright © Domi C. 2016
         </p> </center>
-    <script type="text/javascript">
-                $("#subir").click(function () {
-                    $('body,html').animate({scrollTop: 0}, 500);
-                });
-                $("#btnlogo").click(function () {
-                    $('body,html').animate({scrollTop: 0}, 500);
-                });
-                $("#temp2").mouseenter(function(){
-                    $("#temp").show();
-                });
-                $("#temp2").mouseleave(function(){
-                    $("#temp").hide();
-                });
-                $("#previ").click(function ()
+        <script type="text/javascript">
+         $("#previ").click(function ()
                 {
                     var lugar = $("#local").val();
                     $.post('<?=base_url("index.php/Landing/previ/")?>', {local: lugar}, function (data)
@@ -454,7 +411,7 @@
                         }
                     });
                 });
-    </script>
+         </script>
 </div><!-- FIN DEL CONTENDOR PRINCIPAL DE LA WEB -->   
 </body>
 </html>
