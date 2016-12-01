@@ -339,6 +339,7 @@
                         Selecciona la zona de costa y posteriormente introduce la localidad, el cuadro de la izquierda cambiará con la previsión del sitio seleccionado.</p><br>
                     <center><button type="submit" class="btn btn-info" name="previ" id="previ">Previsión</button> </center><br>
                    <p class="text-primary">  Si tu sitio no aparece, puedes mandarnos la dirección del lugar y lo añadiremos en menos de 24h.</p>
+                   <p class="text-primary" id="praemet"> </p>
                 </div></div> 
         <div class="row">
             <center><button type="submit" class="btn btn-info" name="previ" id="temp2">Temperatura del agua según aemet</button></center><br>
@@ -408,6 +409,20 @@
                         for (post in json)
                         {
                             $("#guru").attr("src", json[post].enlace);
+                        }
+                    });
+                    $.post('<?=base_url("index.php/Landing/aemet/")?>',{local: lugar}, function (data)
+                    {
+                        var json = JSON.parse(data);
+                        var campo;
+                        //console.log(data);
+                        //console.log('el valor del input es:',lugar);
+                        for (post in json)
+                        {
+                            campo = "Previsión marítima <br>"+ json[post].prediccion.zona[0].subzona.texto;
+                             $("#praemet").text(campo);
+                            console.log(json[post].prediccion.zona[1].subzona);
+                            //$("#previsi").val() = json[post].situacion);
                         }
                     });
                 });

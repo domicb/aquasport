@@ -38,7 +38,7 @@
                 $("#temp2").mouseenter(function(){
                     $("#temp").show();
                 });
-                $("#temp2").mouseleave(function(){
+                $("#temp2").click(function(){
                     $("#temp").hide();
                 });
     
