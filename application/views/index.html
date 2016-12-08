@@ -326,17 +326,18 @@
                                     <div class="form-inline">
                         <div class="form-group">
                             <label>Selecciona la zona de pesca : </label><br>
-                            <select name="provincia" class="form-control">
+                            <select name="provincia" id="provincia" class="form-control">
                                 <option></option>
-                                <option value='alava'>Costa de la luz</option>
-                                <option value='albacete'>Costa del sol</option>
+                                <option value='1'>Costa de la luz</option>
+                                <option value='2'>Costa del sol</option>
                             </select>
                             <label class="sr-only"></label>
-                            <input type="email" class="form-control" id="local" name="local"
-                                   placeholder="Introduce la localidad">
+                            <select class="form-control" id="local" name="local">
+                                <option></option>
+                            </select>
                         </div>
                     </div>    <p class="text-primary">  
-                        Selecciona la zona de costa y posteriormente introduce la localidad, el cuadro de la izquierda cambiará con la previsión del sitio seleccionado.</p><br>
+                        Selecciona la zona de costa y posteriormente selecciona la localidad, el cuadro de la izquierda cambiará con la previsión del sitio seleccionado.</p><br>
                     <center><button type="submit" class="btn btn-info" name="previ" id="previ">Previsión</button> </center><br>
                    <p class="text-primary">  Si tu sitio no aparece, puedes mandarnos la dirección del lugar y lo añadiremos en menos de 24h.</p>
                    <p class="text-primary" id="praemet"> </p>
@@ -413,13 +414,27 @@
                         //console.log('el valor del input es:',lugar);
                         for (post in json)
                         {
-                            campo = "Previsión marítima <br>"+ json[post].prediccion.zona[0].subzona.texto;
+                            campo = "La previsión marítima para esta zona de pesca según aemet: "+ json[post].prediccion.zona[0].subzona.texto;
                             $("#praemet").text(campo);
                             console.log(json[post].prediccion.zona[1].subzona);
                             //$("#previsi").val() = json[post].situacion);
                         }
                     });
                 });
+        $("#provincia").change(function()
+        {
+             var sitio = $("#provincia").val();
+             $.post('<?=base_url("index.php/Landing/costas/")?>',{provincia: sitio}, function (data)
+             {
+                var json = JSON.parse(data);
+                $("#local").empty();
+                for (post in json)
+                {
+                    console.log(json[post].sitio);
+                    $("#local").append('<option value='+json[post].sitio+'>'+json[post].sitio+'</option>');
+                }
+             });
+        });
          </script>
 </div><!-- FIN DEL CONTENDOR PRINCIPAL DE LA WEB -->   
 </body>

@@ -20,11 +20,11 @@ class Upload extends CI_Controller {
 
     //FUNCIÓN PARA SUBIR LA IMAGEN Y VALIDAR EL TÍTULO
     function do_upload($desde = 0) {
-        $this->form_validation->set_rules('titulo', 'titulo', 'required|min_length[5]|max_length[50]|trim|xss_clean');
+        $this->form_validation->set_rules('titulo', 'titulo', 'required|min_length[5]|max_length[200]|trim|xss_clean');
         $this->form_validation->set_rules('cuerpo', 'cuerpo', 'required|min_length[35]|max_length[40000]');
         $this->form_validation->set_rules('autor', 'autor', 'required|min_length[3]|max_length[50]|trim|xss_clean');
-        $this->form_validation->set_rules('video', 'video', 'min_length[3]|max_length[190]');
-        $this->form_validation->set_rules('descripcion', 'descripcion', 'required|min_length[3]|max_length[190]');
+        $this->form_validation->set_rules('video', 'video', 'min_length[3]|max_length[290]');
+        $this->form_validation->set_rules('descripcion', 'descripcion', 'required|min_length[3]|max_length[390]');
         $this->form_validation->set_message('required', 'El %s no puede ir vacío!');
         $this->form_validation->set_message('min_length', 'El %s debe tener al menos %s carácteres');
         $this->form_validation->set_message('max_length', 'El %s no puede tener más de %s carácteres');

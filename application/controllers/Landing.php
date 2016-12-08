@@ -8,11 +8,12 @@ class landing extends CI_Controller {
         //$this->output->cache(1);
         $this->load->helper('url');
         $this->load->view('index.html');
+        $this->load->model('Articulos_model');
     }
 
     public function previ() {
-        $lugar = $_POST['local'];
         $this->load->model('Articulos_model');
+        $lugar = $_POST['local'];
         $salida = $this->Articulos_model->tiempo($lugar);
         echo json_encode($salida);
     }
@@ -20,7 +21,8 @@ class landing extends CI_Controller {
     
     public function costas()
     {
-        $lugar = $_POST['sitio'];       
+        $this->load->model('Articulos_model');
+        $lugar = $_POST['provincia'];       
         $salida = $this->Articulos_model->costas($lugar);
         echo json_encode($salida);
     }
