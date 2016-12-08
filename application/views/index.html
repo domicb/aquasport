@@ -315,8 +315,8 @@
                     <!-- EL TIEMPO WIND --><p class="text-primary"><b>La previsión según Windytv.</b></p>         
                     <div class="col-md-8"><iframe src="https://embed.windytv.com/?37.200,-7.317,6,menu,message,marker,ip" width="750" height="500" frameborder="0"></iframe>
         </iframe></div></center> 
-                <div class="col-md-4"><p class="text-primary">Windytv nos proporciona información metorologica del mundo entero, pero no por ello es menos concreto pues podemos navegar justo al lugar de nuestro pesquero y comprovar la previsión para las proximas horas.<br> Los colores amarillos, naranjas y rojos nos ubican las zonas donde el viento sopla con más intensidad. Tambien podemos consultar otros valores cómo temperatura, nubes, olas o presión.</p>
-                    <img src="<?=base_url()?>assets/mundo.png" class="img-responsive" alt="El mundo a través de windytv"><p class="text-primary"> Windytv se actualiza 4 veces al día y por si fuera poco podemos consultar los mejores accesos a nuestro pesquero pues también se ve el mapa de carreteras.</p></div>       
+                <div class="col-md-4"><p class="text-primary">Windytv nos proporciona <b>información metorologica del mundo entero</b>, pero no por ello es menos concreto pues <b>podemos navegar justo al lugar de nuestro pesquero</b> y comprovar la previsión para las proximas horas.<br> Los colores amarillos, naranjas y rojos nos ubican las zonas donde el viento sopla con más intensidad. Tambien podemos consultar otros valores cómo temperatura, nubes, olas o presión.</p>
+                    <img src="<?=base_url()?>assets/mundo.png" class="img-responsive" alt="El mundo a través de windytv"><p class="text-primary"> Windytv <b>se actualiza 4 veces al día</b> y por si fuera poco podemos consultar los mejores accesos a nuestro pesquero pues también se ve el mapa de carreteras.</p></div>       
             </div>
             <div class="row">
                 <div class="col-md-8">
@@ -341,12 +341,6 @@
                    <p class="text-primary">  Si tu sitio no aparece, puedes mandarnos la dirección del lugar y lo añadiremos en menos de 24h.</p>
                    <p class="text-primary" id="praemet"> </p>
                 </div></div> 
-        <div class="row">
-            <center><button type="submit" class="btn btn-info" name="previ" id="temp2">Temperatura del agua según aemet</button></center><br>
-                <div class"col-md-12" id="temp">
-                     <img style="-webkit-user-select: none" src="https://opendata.aemet.es/opendata/api/satelites/producto/sst/?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcXVhc3BvcnQuaW5mb3JtQGdtYWlsLmNvbSIsImp0aSI6ImEyNmEwM2ZkLTc3YmUtNGFkMS1iYThkLThjYTIzODRlMjE1MyIsImV4cCI6MTQ4Nzg0OTU0NCwiaXNzIjoiQUVNRVQiLCJpYXQiOjE0ODAwNzM1NDQsInVzZXJJZCI6ImEyNmEwM2ZkLTc3YmUtNGFkMS1iYThkLThjYTIzODRlMjE1MyIsInJvbGUiOiIifQ.HummA5axxrVmaqJJc-0NGDQlCZFI69J-8FBlDP1dftE">
-                </div>
-        </div>
         <!-- FIN ELTIEMPO -->
         <br><br>
         <hr>          
@@ -424,12 +418,6 @@
                             console.log(json[post].prediccion.zona[1].subzona);
                             //$("#previsi").val() = json[post].situacion);
                         }
-                    });
-
-                    $.get('<?=base_url("index.php/Landing/aemet2/")?>',function (data)
-                    {
-                        var varia = $.parseHTML(data)
-                        console.log(varia);
                     });
                 });
          </script>
