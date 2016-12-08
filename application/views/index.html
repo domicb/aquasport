@@ -46,6 +46,23 @@
                 js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8&appId=1827996470779055";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
+            <!-- dato estructurado -->
+            <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Event",
+  "name": "Certamen de pesca",
+  "startDate" : "2016-12-06T09:30",
+  "url" : "http://www.pescacng.info/foropesca/viewtopic.php?f=9&t=17",
+  "description": "26 certamen de pesca del club la baila en fuengirola",
+  "location" : {
+    "@type" : "Place",
+    "sameAs" : "http://www.pescacng.info",
+    "name" : "Foro de pesca",
+    "address" : "Club de pesca la baila fuengirola"
+  }
+}
+</script>
         <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
         <nav class="navbar navbar-inverse navbar-fixed-top" id="cris" role="navigation">
             <div class="container">
@@ -304,13 +321,10 @@
             <div class="row">
                 <div class="col-md-8">
                 <center><p class="text-primary"><b>La previsión según Windguru.</b></p>
-                   <br>                 
-                     <iframe id="guru" src="https://www.windguru.cz/int/distr_iframe.php?u=1169662&s=48748&c=533e531c1a" frameborder="0" width="800" height="380"></iframe></div></center>  
-                <div class="col-md-4">  
-                     <div class="form-inline">
+                    <div class="form-inline">
                         <div class="form-group">
-                            <label>Selecciona la zona de pesca </label><br>
-                            <select name="provincia" id="lol" class="form-control">
+                            <label>Selecciona la zona de pesca : </label>
+                            <select name="provincia" class="form-control">
                                 <option></option>
                                 <option value='alava'>Costa de la luz</option>
                                 <option value='albacete'>Costa del sol</option>
@@ -319,7 +333,9 @@
                             <input type="email" class="form-control" id="local" name="local"
                                    placeholder="Introduce la localidad">
                         </div>
-                    </div>  <p class="text-primary">   
+                    </div>   <br>                 
+                     <iframe id="guru" src="https://www.windguru.cz/int/distr_iframe.php?u=1169662&s=48748&c=533e531c1a" frameborder="0" width="800" height="380"></iframe></div></center>  
+                <div class="col-md-4"><p class="text-primary">    
                         Selecciona la zona de costa y posteriormente introduce la localidad, el cuadro de la izquierda cambiará con la previsión del sitio seleccionado.</p><br>
                     <center><button type="submit" class="btn btn-info" name="previ" id="previ">Previsión</button> </center><br>
                    <p class="text-primary">  Si tu sitio no aparece, puedes mandarnos la dirección del lugar y lo añadiremos en menos de 24h.</p>
@@ -328,6 +344,7 @@
         <div class="row">
             <center><button type="submit" class="btn btn-info" name="previ" id="temp2">Temperatura del agua según aemet</button></center><br>
                 <div class"col-md-12" id="temp">
+                     <img style="-webkit-user-select: none" src="https://opendata.aemet.es/opendata/api/satelites/producto/sst/?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcXVhc3BvcnQuaW5mb3JtQGdtYWlsLmNvbSIsImp0aSI6ImEyNmEwM2ZkLTc3YmUtNGFkMS1iYThkLThjYTIzODRlMjE1MyIsImV4cCI6MTQ4Nzg0OTU0NCwiaXNzIjoiQUVNRVQiLCJpYXQiOjE0ODAwNzM1NDQsInVzZXJJZCI6ImEyNmEwM2ZkLTc3YmUtNGFkMS1iYThkLThjYTIzODRlMjE1MyIsInJvbGUiOiIifQ.HummA5axxrVmaqJJc-0NGDQlCZFI69J-8FBlDP1dftE">
                 </div>
         </div>
         <!-- FIN ELTIEMPO -->
@@ -409,15 +426,6 @@
                         }
                     });
                 });
-        $("#lol").change(function()
-        {
-            var costa = $("#lol").val();
-            $.post('<?=base_url("index.php/Landing/costas/")?>', {sitio: costa}, function (data)
-            {
-                var json = JSON.parse(data);
-                console.log('es',costa);
-            });
-        });
          </script>
 </div><!-- FIN DEL CONTENDOR PRINCIPAL DE LA WEB -->   
 </body>
