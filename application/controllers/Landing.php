@@ -16,8 +16,7 @@ class landing extends CI_Controller {
         $salida = $this->Articulos_model->tiempo($lugar);
         echo json_encode($salida);
     }
-<<<<<<< HEAD
-=======
+
     
     public function costas()
     {
@@ -25,7 +24,6 @@ class landing extends CI_Controller {
         $salida = $this->Articulos_model->costas($lugar);
         echo json_encode($salida);
     }
->>>>>>> parent of a94a497... comir
 
     public function aemet() {
 
