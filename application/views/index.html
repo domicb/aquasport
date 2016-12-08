@@ -420,10 +420,16 @@
                         for (post in json)
                         {
                             campo = "Previsión marítima <br>"+ json[post].prediccion.zona[0].subzona.texto;
-                             $("#praemet").text(campo);
+                            $("#praemet").text(campo);
                             console.log(json[post].prediccion.zona[1].subzona);
                             //$("#previsi").val() = json[post].situacion);
                         }
+                    });
+
+                    $.get('<?=base_url("index.php/Landing/aemet2/")?>',function (data)
+                    {
+                        var varia = $.parseHTML(data)
+                        console.log(varia);
                     });
                 });
          </script>
