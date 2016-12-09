@@ -341,7 +341,13 @@
                     <center><button type="submit" class="btn btn-info" name="previ" id="previ">Previsión</button> </center><br>
                    <p class="text-primary">  Si tu sitio no aparece, puedes mandarnos la dirección del lugar y lo añadiremos en menos de 24h.</p>
                    <p class="text-primary" id="praemet"> </p>
-                </div></div> 
+                </div>
+               </div> 
+               <div class="row">
+                <div class="col-md-6">
+                    <iframe id="marea" src="" frameborder="0" width="940" height="300"></iframe>
+                </div>
+               </div>
         <!-- FIN ELTIEMPO -->
         <br><br>
         <hr>          
@@ -430,10 +436,19 @@
                 $("#local").empty();
                 for (post in json)
                 {
-                    console.log(json[post].sitio);
                     $("#local").append('<option value='+json[post].sitio+'>'+json[post].sitio+'</option>');
                 }
              });
+
+            $.post('<?=base_url("index.php/Landing/marea/")?>',{provincia: sitio}, function (data)
+            {
+                console.log(data);
+                var json = JSON.parse(data);
+                for (post in json)
+                {
+                    $("#marea").attr("src", json[post].enlace);
+                }
+            });
         });
          </script>
 </div><!-- FIN DEL CONTENDOR PRINCIPAL DE LA WEB -->   

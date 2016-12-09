@@ -47,4 +47,12 @@ class Articulos_model extends CI_Model {
         $query = $this->db->get();
         return $query->result_array();
     }
+    
+    public function mareas($lugar){
+        $this->db->select('enlace');
+        $this->db->from('marea');
+        $this->db->like('costa',$lugar);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
 }

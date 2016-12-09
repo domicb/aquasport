@@ -26,6 +26,14 @@ class landing extends CI_Controller {
         $salida = $this->Articulos_model->costas($lugar);
         echo json_encode($salida);
     }
+    
+    public function marea()
+    {
+        $this->load->model('Articulos_model');
+        $lugar = $_POST['provincia'];       
+        $salida = $this->Articulos_model->mareas($lugar);
+        echo json_encode($salida);
+    }
 /**
  * funcion que nos devuelve la prediccion en texto
  */
