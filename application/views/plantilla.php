@@ -29,22 +29,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <style type="text/css">
-            .titulo{
-                color:#012DFF;
-                line-height: 1.2;}
-            #titulo{
-                color:#1F618D;
-                font-style:"century ghotic";}
-            .p{
-                color:#0066E8;}
-            #cris{
-                background-color:#1F618D;
-                font-size:18px;}   
 
-            html, body, #map_canvas {                
-                height: 100%;}
-            </style>
+            <link href="<?=base_url()?>assets/css/stilo.css" rel="stylesheet" type="text/css">
         </head>
         <body>
             <!-- BARRA DE NAVEGACIÓN SUPERIOR -->

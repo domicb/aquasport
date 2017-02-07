@@ -1,6 +1,6 @@
 
             $(document).ready(function () {
-                $("#temp").toggle();
+                $("#marea").toggle();
                 $("#top").click(function () {
                     var posicion = $("#aqui").offset().top;
                     $("html, body").animate({scrollTop: posicion});
@@ -34,12 +34,6 @@
                 });
                 $("#btnlogo").click(function () {
                     $('body,html').animate({scrollTop: 0}, 500);
-                });
-                $("#temp2").mouseenter(function(){
-                    $("#temp").show();
-                });
-                $("#temp2").click(function(){
-                    $("#temp").hide();
                 });
     
             });
